@@ -60,6 +60,21 @@
             color: #00D9FF;
         }
 
+        .logout-btn {
+            background: #FF6B35;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #e85d2d;
+        }
+
         .hamburger {
             display: none;
             flex-direction: column;
@@ -101,15 +116,18 @@
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         .hero h2 {
             font-size: 28px;
             font-weight: 300;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             color: #00D9FF;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
         /* Container */
@@ -170,6 +188,81 @@
             margin-bottom: 10px;
         }
 
+        strong {
+            color: #0047AB;
+            font-weight: 600;
+        }
+
+        /* Prompt Boxes */
+        .prompt-box {
+            background: #e3f2fd;
+            border: 2px solid #00D9FF;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .prompt-box pre {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #0047AB;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: #003380;
+        }
+
+        .copy-btn.copied {
+            background: #39FF14;
+            color: #000;
+        }
+
+        /* Notes Section */
+        .notes-section {
+            background: #fffbf0;
+            border: 3px solid #FF6B35;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .notes-section h4 {
+            color: #FF6B35;
+            margin-top: 0;
+        }
+
+        .notes-section textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 2px solid #FF6B35;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+        }
+
         /* Callout Boxes */
         .callout {
             padding: 20px;
@@ -194,140 +287,33 @@
         }
 
         .callout strong {
-            color: #0047AB;
             display: block;
             margin-bottom: 10px;
             font-size: 18px;
         }
 
-        /* Prompt Boxes */
-        .prompt-box {
-            background: #000000;
-            color: #39FF14;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            font-family: 'Courier New', monospace;
-            position: relative;
-        }
-
-        .prompt-box pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            margin: 0;
-            font-size: 14px;
-        }
-
-        .copy-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #FF6B35;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .copy-btn:hover {
-            background: #e85d2d;
-        }
-
-        .copy-btn.copied {
-            background: #39FF14;
-            color: #000000;
-        }
-
-        /* Editable Text Areas */
-        .notes-area {
+        /* Table Styles */
+        table {
             width: 100%;
-            min-height: 120px;
-            padding: 15px;
-            border: 2px solid #0047AB;
-            border-radius: 8px;
-            font-size: 16px;
-            font-family: inherit;
-            resize: vertical;
-            margin: 15px 0;
-        }
-
-        .notes-area:focus {
-            outline: none;
-            border-color: #00D9FF;
-            box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
-        }
-
-        .notes-label {
-            font-weight: bold;
-            color: #0047AB;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 40px;
-            margin: 30px 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: #0047AB;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -35px;
-            top: 5px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #FF6B35;
-            border: 4px solid white;
-            box-shadow: 0 0 0 2px #0047AB;
-        }
-
-        .timeline-item h4 {
-            color: #0047AB;
-            margin-bottom: 10px;
-        }
-
-        /* Grid Layout */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
-        }
-
-        .card {
+            border-collapse: collapse;
+            margin: 20px 0;
             background: white;
-            padding: 25px;
-            border-radius: 10px;
-            border: 2px solid #0047AB;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .card h4 {
-            color: #0047AB;
-            margin-top: 0;
-            margin-bottom: 15px;
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #0047AB;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
         }
 
         /* Footer */
@@ -404,6 +390,12 @@
         html {
             scroll-behavior: smooth;
         }
+
+        hr {
+            border: none;
+            border-top: 2px solid #0047AB;
+            margin: 40px 0;
+        }
     </style>
 </head>
 <body>
@@ -411,20 +403,15 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-brand">AI DOMINATION PLAYBOOK</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><button class="logout-btn" onclick="logout()">Logout</button></li>
+            </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#chatgpt">ChatGPT</a></li>
-                <li><a href="#claude">Claude</a></li>
-                <li><a href="#virtual-staging">Virtual Staging</a></li>
-                <li><a href="#automation">Automation</a></li>
-                <li><a href="#implementation">90-Day Plan</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-            </ul>
         </div>
     </nav>
 
@@ -434,1568 +421,1574 @@
             <img src="edmund-photo.png" alt="Edmund Bogen" class="hero-image">
             <h1>The AI Domination Playbook</h1>
             <h2>Your 90-Day Blueprint for Real Estate Mastery</h2>
-            <p>Master AI tools and transform your real estate business with proven strategies</p>
+            <p><strong>By Edmund Bogen</strong></p>
+            <p>Luxury Real Estate Expert | AI Integration Specialist | South Florida</p>
         </div>
     </section>
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Introduction Section -->
-        <section id="introduction" class="section">
-            <div class="section-header">Welcome to Your AI Journey</div>
+
+        <!-- INTRODUCTION -->
+        <div class="section">
+            <div class="section-header">A MESSAGE FROM EDMUND BOGEN</div>
             <div class="section-content">
-                <p><strong>Congratulations on taking the first step toward AI mastery in real estate!</strong></p>
+                <p>Welcome to the beginning of truly agentic AI in real estate.</p>
 
-                <p>This comprehensive playbook will guide you through leveraging the most powerful AI tools available today: ChatGPT, Claude, and cutting-edge automation platforms. Whether you're looking to streamline your workflow, create compelling marketing content, or revolutionize how you serve clients, this course has you covered.</p>
+                <p>Let me explain what that means in plain English, because this is important:</p>
 
-                <div class="callout callout-orange">
-                    <strong>What You'll Learn:</strong>
-                    <ul>
-                        <li>Master ChatGPT for content creation, client communication, and market analysis</li>
-                        <li>Leverage Claude Projects for long-term client management and complex workflows</li>
-                        <li>Create stunning virtual staging and property visualizations</li>
-                        <li>Build automated systems that save you hours every day</li>
-                        <li>Implement everything in 90 days with our step-by-step plan</li>
-                    </ul>
-                </div>
+                <p>Until now, AI has been reactive. You ask ChatGPT a question, it gives you an answer. You're still doing all the work—the clicking, the copying, the pasting, the organizing, the executing.</p>
 
-                <h3>How to Use This Playbook</h3>
-                <div class="grid-2">
-                    <div class="card">
-                        <h4>📝 Take Notes</h4>
-                        <p>Every section has editable note areas. Use them to capture ideas, customize prompts for your market, and track your progress.</p>
-                    </div>
-                    <div class="card">
-                        <h4>📋 Copy Prompts</h4>
-                        <p>Click the "Copy" button on any prompt to instantly copy it to your clipboard. Paste directly into ChatGPT or Claude.</p>
-                    </div>
-                    <div class="card">
-                        <h4>🎯 Follow the Plan</h4>
-                        <p>The 90-day implementation plan breaks everything into manageable weekly goals. Don't skip ahead—master each tool progressively.</p>
-                    </div>
-                    <div class="card">
-                        <h4>💡 Customize Everything</h4>
-                        <p>All prompts are templates. Edit them with your specific market data, your voice, and your unique value proposition.</p>
-                    </div>
-                </div>
+                <p><strong>Agentic AI is different. It doesn't just answer—it acts.</strong></p>
 
-                <label class="notes-label">YOUR NOTES: Why did you enroll in this course? What are your biggest goals?</label>
-                <textarea class="notes-area" placeholder="Type your notes here..." data-storage-key="intro-notes"></textarea>
-            </div>
-        </section>
+                <p>Think of it like this: Reactive AI is like having a really smart intern who can answer any question you ask. Agentic AI is like having a personal assistant who not only answers your questions but also handles your calendar, drafts your CMAs, researches your competition, organizes your content, and completes multi-step workflows without you having to micromanage every single action.</p>
 
-        <!-- ChatGPT Mastery Section -->
-        <section id="chatgpt" class="section">
-            <div class="section-header">Part 1: ChatGPT Mastery</div>
-            <div class="section-content">
-                <h3>Understanding ChatGPT in Real Estate</h3>
+                <p><strong>For real estate professionals, here's what this actually means:</strong></p>
 
-                <p>ChatGPT is your AI-powered assistant that can help with everything from writing property descriptions to analyzing market trends. The key to getting amazing results is learning how to communicate effectively with it.</p>
+                <p>Instead of spending 45 minutes researching comps, copying data, and writing a CMA—you tell your AI what you need, and it handles the entire workflow in 2 minutes. Instead of drafting five different follow-up emails manually, the AI writes them, personalizes them, and tracks your outreach. Instead of spending 10 hours per week creating content, you record one 10-minute video and your AI generates two weeks of social media posts, blog articles, and email sequences.</p>
 
-                <div class="callout callout-cyan">
-                    <strong>💡 Pro Tip: The Power of Context</strong>
-                    <p>ChatGPT performs best when you give it context about who you are, what you need, and how you want the output formatted. Always start conversations by establishing your role and the task.</p>
-                </div>
+                <p><strong>This isn't science fiction. This is happening right now, today.</strong></p>
 
-                <h3>Getting Started with ChatGPT</h3>
+                <hr>
 
-                <h4>Setting Up Your Account</h4>
-                <ol>
-                    <li>Go to <strong>chat.openai.com</strong> and create a free account</li>
-                    <li>Consider upgrading to ChatGPT Plus ($20/month) for:
-                        <ul>
-                            <li>Access during peak times</li>
-                            <li>Faster response times</li>
-                            <li>Priority access to new features</li>
-                            <li>GPT-4 (more advanced reasoning)</li>
-                        </ul>
-                    </li>
-                    <li>Explore the interface and start a conversation</li>
-                </ol>
+                <h3>THIS REQUIRES PRACTICE (JUST LIKE ANYTHING ELSE)</h3>
 
-                <h4>The Anatomy of a Great Prompt</h4>
-                <p>A well-crafted prompt has four key elements:</p>
-                <ol>
-                    <li><strong>Role:</strong> Tell ChatGPT who it should act as</li>
-                    <li><strong>Context:</strong> Provide background information</li>
-                    <li><strong>Task:</strong> Clearly state what you want</li>
-                    <li><strong>Format:</strong> Specify how you want the output</li>
-                </ol>
+                <p>Here's what I need you to understand: Like any other skill in business or life—prospecting, negotiating, giving presentations, using your CRM—agentic AI requires practice and training.</p>
 
-                <h3>Essential ChatGPT Prompts for Realtors</h3>
+                <p>You wouldn't expect to become a master negotiator after one seminar. You wouldn't expect to dominate social media marketing after watching one YouTube video. The same is true here.</p>
 
-                <h4>1. Property Description Generator</h4>
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>You are an expert real estate copywriter specializing in luxury property descriptions.
+                <p><strong>The difference is the payoff.</strong></p>
 
-I need you to write a compelling property description for:
+                <p>When you invest time in mastering these tools—and I'm talking about consistent, focused practice over weeks and months—you can increase your productivity by an order of magnitude.</p>
 
-Property Details:
-- Address: [Your Property Address]
-- Price: $[Price]
-- Bedrooms: [Number]
-- Bathrooms: [Number]
-- Square Feet: [Sq Ft]
-- Lot Size: [Size]
-- Year Built: [Year]
-- Special Features: [List key features]
+                <p>Let me be crystal clear about what "order of magnitude" means: That's not 10% better. That's not even 2x better. An order of magnitude means <strong>10x—ten times more productive.</strong></p>
 
-Style Guidelines:
-- Tone: [Luxury/Family-Friendly/Modern/Classic]
-- Length: [Short/Medium/Long - specify word count]
-- Highlight: [What to emphasize]
+                <p><strong>Think about that for a second:</strong></p>
 
-Create a description that:
-1. Captures attention in the first sentence
-2. Paints a vivid picture of the lifestyle
-3. Highlights unique features and benefits
-4. Includes a compelling call-to-action
-5. Is optimized for [MLS/Website/Social Media]
+                <ul>
+                    <li>If you currently send 5 CMAs per month, this could mean 50.</li>
+                    <li>If you spend 15 hours per week on marketing and admin, this could mean 3 hours.</li>
+                    <li>If you post on social media 3 times per week, this could mean 30 times per week.</li>
+                    <li>If you touch your database quarterly, this could mean daily.</li>
+                </ul>
 
-Make it emotional and aspirational while remaining factual.</pre>
-                </div>
+                <p>This is not a fluffy, motivational statement. This is real.</p>
 
-                <label class="notes-label">YOUR NOTES: Customize this prompt for your market</label>
-                <textarea class="notes-area" placeholder="How will you adapt this for your typical properties?" data-storage-key="chatgpt-property-desc-notes"></textarea>
+                <p>I've seen agents cut their CMA prep time from 45 minutes to 2 minutes. I've watched realtors go from 3 content posts per week to 30. I've witnessed producers automate entire workflows that used to consume half their week—virtual staging that cost $1,000 per listing now costs nothing. Copywriting that cost $500 now takes 5 minutes.</p>
 
-                <h4>2. Social Media Content Creator</h4>
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>You are a social media expert for real estate agents.
+                <p><strong>The technology exists. The tools are available. The only question is: Will you be one of the people who learns to use them?</strong></p>
 
-Create a week's worth of engaging social media posts for:
+                <hr>
 
-Platform: [Instagram/Facebook/LinkedIn/TikTok]
-Target Audience: [First-time buyers/Luxury clients/Investors]
-Market: [Your City/Neighborhood]
+                <h3>YOUR COMPETITION IS ALREADY DOING THIS</h3>
 
-Topics to cover:
-- Monday: Market update or tip
-- Tuesday: Property spotlight
-- Wednesday: Client testimonial or success story
-- Thursday: Behind-the-scenes or personal story
-- Friday: Weekend open house promotion
+                <p>This is not some far-off event we're preparing for. This is not "the future of real estate." This is today.</p>
 
-For each post include:
-1. Engaging caption (optimized for platform)
-2. 3-5 relevant hashtags
-3. Emoji suggestions
-4. Call-to-action
-5. Best time to post
+                <p>Right now, while you're reading this, there are agents in your market who are:</p>
 
-Make the content authentic, valuable, and engaging while showcasing my expertise.</pre>
-                </div>
+                <ul>
+                    <li>Creating personalized CMAs for every prospect in their farm area—daily</li>
+                    <li>Responding to leads with custom market analyses in minutes instead of hours</li>
+                    <li>Generating weeks of content from a single recorded conversation</li>
+                    <li>Following up with 10x more prospects than they could before</li>
+                    <li>Analyzing HOA financials and market data at speeds that were impossible last year</li>
+                </ul>
 
-                <h4>3. Email Response Templates</h4>
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>You are a professional real estate agent known for excellent client communication.
+                <p>They're not smarter than you. They're not working harder than you. They're using AI tools to work at a completely different level.</p>
 
-Help me craft a professional email response to:
+                <p>And here's the thing: Six months from now, this won't be a competitive advantage anymore—it will be table stakes. The question isn't whether AI will transform how real estate is sold. The question is whether you'll be leading that transformation or scrambling to catch up.</p>
 
-Client Inquiry:
-[Paste the client's message here]
+                <hr>
 
-Context:
-- Client Name: [Name]
-- Property: [Address or type]
-- Stage: [First inquiry/Showing scheduled/Under contract]
-- Special Notes: [Any relevant details]
+                <h3>WHAT THIS COURSEBOOK WILL DO FOR YOU</h3>
 
-Tone: [Professional but friendly/Formal/Casual]
+                <p>Over the next 90 days, I'm going to show you exactly how to harness these tools. Not theory. Not hype. Actual workflows you can implement today.</p>
 
-The response should:
-1. Address all their questions thoroughly
-2. Provide additional valuable information
-3. Build trust and rapport
-4. Include a clear next step
-5. Be concise but complete
+                <p><strong>This guide contains:</strong></p>
 
-Keep it warm and professional.</pre>
-                </div>
-
-                <h4>4. Market Analysis Reporter</h4>
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>You are a real estate market analyst with expertise in data interpretation.
-
-Analyze this market data and create a report:
-
-Market: [Your Area]
-Time Period: [Month/Quarter/Year]
-
-Data:
-- Average Sale Price: $[Amount]
-- Days on Market: [Number]
-- Inventory Levels: [Number of homes]
-- Price Trends: [Up/Down X%]
-- Interest Rates: [Current rate]
-
-Create a comprehensive market report that includes:
-1. Executive Summary (3-4 sentences)
-2. Key Trends and What They Mean
-3. Buyer and Seller Implications
-4. Predictions for Next Quarter
-5. Actionable Advice for [Buyers/Sellers]
-
-Format it as:
-[Newsletter/Client presentation/Social media post]
-
-Make it easy to understand while demonstrating expertise.</pre>
-                </div>
-
-                <h4>5. Listing Presentation Creator</h4>
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>You are a top-producing real estate agent preparing a listing presentation.
-
-Create a compelling presentation outline for:
-
-Property:
-- Address: [Address]
-- Owner: [Name]
-- Property Type: [Single family/Condo/etc]
-- Current Value: $[Estimate]
-
-Include sections on:
-1. Introduction (why choose me)
-2. Market Analysis (comparables and trends)
-3. Pricing Strategy
-4. Marketing Plan (where and how I'll promote)
-5. Timeline and Process
-6. Expected Results
-7. Next Steps
-
-For each section, provide:
-- Key talking points
-- Statistics to mention
-- Questions to ask
-- Objection handlers
-
-Make it persuasive and confidence-building.</pre>
-                </div>
-
-                <h3>Advanced ChatGPT Techniques</h3>
+                <ul>
+                    <li><strong>50+ Copy-Paste AI Prompts</strong> - Ready to use immediately in your business</li>
+                    <li><strong>Step-by-Step Tool Setup</strong> - No tech background needed</li>
+                    <li><strong>Claude Projects Blueprints</strong> - Pre-built AI assistants for CMAs, HOA analysis, and content</li>
+                    <li><strong>Week-by-Week Implementation Plan</strong> - 90 days to complete AI integration</li>
+                    <li><strong>Real-World Examples</strong> - From actual real estate scenarios</li>
+                    <li><strong>ROI Tracking Worksheets</strong> - Measure your time and cost savings</li>
+                    <li><strong>Space for Your Notes</strong> - Customize everything to your market</li>
+                </ul>
 
                 <div class="callout callout-lime">
-                    <strong>🚀 Level Up: Custom Instructions</strong>
-                    <p>In ChatGPT settings, you can set "Custom Instructions" that apply to every conversation. This is perfect for telling ChatGPT about your business once, so it always has context.</p>
+                    <strong>You'll learn specific, high-impact strategies that will:</strong>
+                    <p>✅ Generate personalized CMAs in 2 minutes instead of 45 minutes<br>
+                    ✅ Create two weeks of social content from one 10-minute recording<br>
+                    ✅ Stage properties virtually for free (saving $7,500-21,000/year)<br>
+                    ✅ Analyze HOA financials like a professional auditor<br>
+                    ✅ Write listing descriptions, social posts, and emails in seconds<br>
+                    ✅ Touch your database daily with personalized, valuable content</p>
                 </div>
 
-                <h4>Custom Instructions Template</h4>
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>ABOUT ME:
-I am a licensed real estate agent in [Your Market].
+                <p>Each strategy includes step-by-step instructions, copy-and-paste prompts, and space for you to customize and practice.</p>
 
-My specialties:
-- [Your niche: luxury homes, first-time buyers, etc]
-- Areas served: [Your locations]
-- Years of experience: [Number]
-- Brokerage: [Name]
+                <hr>
 
-My unique value proposition:
-[What makes you different?]
+                <h3>BUT HERE'S WHAT I NEED FROM YOU</h3>
 
-My typical clients:
-[Demographics and needs]
+                <p><strong>Don't just read this coursebook. Practice it.</strong></p>
 
-RESPONSE PREFERENCES:
-- Tone: Professional but approachable
-- Format: Clear sections with bullet points
-- Length: Concise but thorough
-- Always include actionable next steps
-- Use real estate industry terminology
-- Optimize for [Your primary platforms]</pre>
-                </div>
+                <p>Try one workflow this week. Really use it. Refine it. Make it your own. Then add another next week.</p>
 
-                <h4>Using ChatGPT for Research</h4>
-                <p>ChatGPT can help you quickly understand complex topics, but remember: always verify information from authoritative sources, especially for legal, financial, or market data.</p>
+                <p>Within 30 days, these tools will feel natural.<br>
+                Within 90 days, you'll wonder how you ever worked without them.</p>
 
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>I need to understand [Topic: FHA loans, 1031 exchanges, etc].
+                <p>The agents who commit to this—who treat AI mastery like they would any other critical business skill—will dominate their markets for the next decade.</p>
 
-Explain it in simple terms as if you're teaching a client who is unfamiliar with real estate.
+                <p><strong>The choice is yours. Let's get started.</strong></p>
 
-Include:
-1. Basic definition
-2. How it works (step-by-step)
-3. Benefits
-4. Potential drawbacks
-5. Who it's best for
-6. Common misconceptions
-7. Key questions clients should ask
-
-Use analogies and examples to make it easy to understand.</pre>
-                </div>
-
-                <label class="notes-label">YOUR NOTES: What ChatGPT applications will help your business most?</label>
-                <textarea class="notes-area" placeholder="List your top 3 ChatGPT use cases..." data-storage-key="chatgpt-applications-notes"></textarea>
-
-                <h3>Practice Exercise: Your First Conversation</h3>
-                <div class="callout callout-orange">
-                    <strong>🎯 Action Item</strong>
-                    <p>Right now, open ChatGPT and use one of the prompts above. Copy it, customize the bracketed sections with your information, and see what it creates. Then iterate—ask it to make it shorter, more formal, more exciting, etc.</p>
-                </div>
-
-                <label class="notes-label">YOUR PRACTICE NOTES: What prompt did you try? What worked? What didn't?</label>
-                <textarea class="notes-area" placeholder="Document your first ChatGPT experience..." data-storage-key="chatgpt-practice-notes"></textarea>
+                <p>— Edmund Bogen<br>
+                Luxury Real Estate Advisor, Coach & Speaker<br>
+                South Florida</p>
             </div>
-        </section>
+        </div>
 
-        <!-- Claude Projects Section -->
-        <section id="claude" class="section">
-            <div class="section-header">Part 2: Claude Projects for Long-Term Success</div>
+        <!-- HOW TO USE THIS COURSEBOOK -->
+        <div class="section">
+            <div class="section-header">HOW TO USE THIS COURSEBOOK</div>
             <div class="section-content">
-                <h3>What Makes Claude Different?</h3>
+                <p><strong>Here's the system:</strong></p>
 
-                <p>While ChatGPT is excellent for quick tasks and creative content, <strong>Claude</strong> (by Anthropic) excels at complex, ongoing projects that require consistent context and careful reasoning.</p>
+                <ol>
+                    <li><strong>Read Part 1 (Foundations)</strong> - Understand the why and the what</li>
+                    <li><strong>Choose ONE tool from Part 2 or 3</strong> - Start with what excites you most</li>
+                    <li><strong>Complete Week 1 of the implementation plan</strong> - Take action immediately</li>
+                    <li><strong>Practice for 7 days straight</strong> - Build the habit</li>
+                    <li><strong>Add the next tool</strong> - Layer in complexity gradually</li>
+                </ol>
 
                 <div class="callout callout-cyan">
-                    <strong>🌟 Why Use Claude?</strong>
-                    <ul>
-                        <li><strong>Longer Memory:</strong> Claude can work with larger documents and maintain context</li>
-                        <li><strong>Projects Feature:</strong> Build custom AI assistants with ongoing knowledge</li>
-                        <li><strong>Careful Reasoning:</strong> Better at following complex instructions</li>
-                        <li><strong>Document Analysis:</strong> Upload PDFs, contracts, and more</li>
-                    </ul>
+                    <strong>The tools are organized by impact and difficulty:</strong>
+                    <p><strong>Start Here:</strong> ChatGPT listing content (easiest, immediate ROI)<br>
+                    <strong>Next:</strong> Claude CMA Factory (medium setup, massive ROI)<br>
+                    <strong>Then:</strong> Content automation workflows (higher complexity, scales infinitely)</p>
                 </div>
 
-                <h3>Setting Up Claude Projects</h3>
+                <p><strong>Take notes throughout.</strong> I've left space in every section because your market is different from mine. Your brand voice is different. Your clients are different. This coursebook is a framework—you make it yours.</p>
+
+                <p><strong>Track your results.</strong> Use the ROI worksheets. When you see the numbers—the hours saved, the money saved, the deals influenced—you'll never go back.</p>
+            </div>
+        </div>
+
+        <!-- PART 1: FOUNDATIONS -->
+        <div class="section">
+            <div class="section-header">PART 1: FOUNDATIONS</div>
+            <div class="section-content">
+                <h3>Why AI Is Non-Negotiable Now</h3>
+
+                <p><strong>The Market Reality:</strong></p>
+
+                <p>More than 90% of Americans have heard of AI. About three in four want to know when content is AI-generated. But only about 1 in 10 feel confident they can tell the difference.</p>
+
+                <p>That gap? That's your opportunity.</p>
+
+                <p>While 52% of Americans are more concerned than excited about AI, a small percentage of real estate professionals are already using it to dominate their markets. They have a 1-2 year head start on everyone else.</p>
+
+                <p><strong>Here's what that looks like in practice:</strong></p>
+
+                <p>Right now, there are agents in your market who are:</p>
+                <ul>
+                    <li>Sending personalized CMAs to 30 prospects per month (you're probably sending 3)</li>
+                    <li>Creating 30 pieces of content per week (you're probably creating 3)</li>
+                    <li>Responding to leads with custom analyses in 5 minutes (you're taking 2 hours)</li>
+                    <li>Staging properties for $0 (you're spending $7,500-21,000 per year)</li>
+                </ul>
+
+                <h4>Your Business Impact (The Real Numbers):</h4>
+
+                <p>The average realtor spends <strong>15-20 hours per week</strong> on marketing and administrative work.</p>
+
+                <p>With AI implementation, you can potentially save <strong>10-15+ hours per week</strong>.</p>
+
+                <p>If those hours are reinvested in dollar-productive activities at $150/hour average revenue = <strong>$6,000-10,000 more per month in potential.</strong></p>
+
+                <p>That's not including the hard cost savings:</p>
+                <ul>
+                    <li>Virtual staging: $625/month saved (with active use)</li>
+                    <li>Copywriting: $500/month saved</li>
+                    <li>Graphic design: $300/month saved</li>
+                    <li>Market research: $400/month saved</li>
+                </ul>
+
+                <div class="callout callout-orange">
+                    <strong>Total potential impact: $8,000-12,000 per month</strong>
+                </div>
+
+                <p><strong>The Choice:</strong></p>
+
+                <p>Learn it now while it's a competitive advantage, or learn it later when it's a survival requirement.</p>
+
+                <p>I'm here to help you choose the first option.</p>
+
+                <div class="notes-section">
+                    <h4>NOTES: What parts of my business take the most time?</h4>
+                    <textarea class="notes-field" data-key="foundations-time-wasters" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <hr>
+
+                <h3>The AI + Human Formula</h3>
+
+                <p><strong>This Is Not About Replacement. It's About Augmentation.</strong></p>
+
+                <p>Here's how it works:</p>
+
+                <p>AI drafts, you review. AI suggests, you decide. AI scales, you customize. AI works 24/7, you maintain the relationships.</p>
+
+                <p>You're not being replaced by AI. You're being upgraded.</p>
+
+                <p><strong>Let's be transparent about this:</strong></p>
+
+                <p>About three in four Americans want to know what's AI-generated. So don't hide it. Be upfront when it makes sense:</p>
+
+                <p><em>"This market analysis was prepared using AI-powered tools and verified by my 20 years of real estate experience."</em></p>
+
+                <p>Or simply: <em>"I use AI to handle the research and data analysis so I can focus on strategy and service."</em></p>
+
+                <p>Nobody cares HOW you created value—they care THAT you created value, delivered it faster, and made it more personalized than your competition.</p>
+
+                <p><strong>The agents who pretend they're doing everything manually?</strong> They're either lying or drowning in busywork while you're closing deals.</p>
+
+                <hr>
+
+                <h3>Your AI Tech Stack</h3>
+
+                <p><strong>Here's what you need:</strong></p>
+
+                <h4>FREE TOOLS (Start Here)</h4>
+                <ul>
+                    <li><strong>ChatGPT Free Version</strong> - Basic content generation, good enough to start</li>
+                    <li><strong>Google Nano Banana</strong> - Virtual staging (saves you $7,500-21,000/year)</li>
+                    <li><strong>Canva Free</strong> - Social media graphics</li>
+                    <li><strong>Otter.ai Free</strong> - Limited transcription (600 minutes/month)</li>
+                </ul>
+
+                <h4>PAID TOOLS (Recommended for Serious Implementation)</h4>
+                <ul>
+                    <li><strong>ChatGPT Plus</strong> - $20/month - Advanced features, image analysis, faster responses</li>
+                    <li><strong>Claude Pro</strong> - $20/month - Long-form content, superior analysis, Projects feature</li>
+                    <li><strong>Otter.ai Pro</strong> - $16.99/month - Unlimited transcription, better accuracy</li>
+                    <li><strong>Canva Pro</strong> - $12.99/month - Advanced templates and brand kit</li>
+                </ul>
+
+                <h4>THE MATH</h4>
+
+                <p><strong>Total monthly investment: $70</strong></p>
+
+                <p><strong>What you're replacing:</strong></p>
+                <ul>
+                    <li>Copywriter: $500/month</li>
+                    <li>Graphic designer: $300/month</li>
+                    <li>Virtual staging: $625/month</li>
+                    <li>Market research: $400/month</li>
+                    <li>Content creator: $1,000/month</li>
+                </ul>
+
+                <p><strong>Total services replaced: $2,825/month</strong></p>
+
+                <div class="callout callout-lime">
+                    <strong>ROI: 4,000%</strong>
+                    <p>You're not spending $70/month on software. You're saving $2,755/month on services you're currently paying for (or should be using but can't afford).</p>
+                </div>
+
+                <div class="notes-section">
+                    <h4>NOTES: Which tools will I start with?</h4>
+                    <textarea class="notes-field" data-key="foundations-tools" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <div class="callout callout-cyan">
+                    <strong>Need help getting started?</strong>
+                    <p>Bogen.AI can help you integrate AI into your business with personalized setup and training. Contact Edmund for office trainings and private coaching sessions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 2: CHATGPT MASTERY -->
+        <div class="section">
+            <div class="section-header">PART 2: CHATGPT MASTERY</div>
+            <div class="section-content">
+                <h3>Getting Started with ChatGPT</h3>
+
+                <h4>Step 1: Create Your Account</h4>
+                <ol>
+                    <li>Go to chat.openai.com</li>
+                    <li>Sign up with email or Google account</li>
+                    <li>Verify your email</li>
+                    <li>Choose Free or Plus ($20/month recommended)</li>
+                </ol>
+
+                <h4>Step 2: Understand the Interface</h4>
+                <ul>
+                    <li><strong>New Chat</strong> - Start fresh conversations</li>
+                    <li><strong>Chat History</strong> - Access previous conversations</li>
+                    <li><strong>Custom Instructions</strong> - Set default behaviors (Plus only)</li>
+                </ul>
+
+                <h4>Step 3: Set Up Custom Instructions (Plus Users)</h4>
+                <p>This tells ChatGPT about you so every response is customized:</p>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <strong>What would you like ChatGPT to know about you?</strong>
+                    <pre>I am a luxury real estate agent in [Your Market].
+I specialize in [Your Niche].
+My average listing price is $[Amount].
+I work with [Type of Clients].
+My brand voice is [Professional/Friendly/Authoritative].</pre>
+                </div>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <strong>How would you like ChatGPT to respond?</strong>
+                    <pre>- Keep responses concise and actionable
+- Format for easy copy-paste
+- Focus on high-ROI activities
+- Use luxury market terminology
+- Avoid jargon my clients won't understand</pre>
+                </div>
+
+                <hr>
+
+                <h3>Tool 1: Listing Content Generator</h3>
+
+                <p><strong>The Problem:</strong> Writing compelling listing descriptions takes 1-2 hours and $200-500 if outsourced.</p>
+
+                <p><strong>The AI Solution:</strong> Generate complete listing packages in 5 minutes.</p>
+
+                <h4>Basic Listing Description</h4>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <pre>Create a luxury listing description for a [property type] with the following features:
+
+PROPERTY DETAILS:
+- Address: [Full address or area]
+- Square Footage: [SF]
+- Bedrooms/Bathrooms: [#/#]
+- Key Features: [pool, ocean view, smart home, etc.]
+- Unique Selling Points: [what makes this special]
+- Price: $[Amount]
+
+Style: [Elegant/Modern/Coastal/Traditional]
+Length: 250-300 words
+Include: Emotional appeal and lifestyle benefits</pre>
+                </div>
+
+                <h4>Social Media Caption Package</h4>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <pre>Create 5 social media captions for this listing:
+
+PROPERTY: [Brief description]
+PRICE: $[Amount]
+KEY FEATURES: [Top 3 features]
+
+Format:
+1. Instagram (with emojis, 3-5 hashtags)
+2. Facebook (conversational, longer)
+3. LinkedIn (professional, investment angle)
+4. Twitter/X (concise, compelling hook)
+5. TikTok/Reel hook (attention-grabbing first line)</pre>
+                </div>
+
+                <h4>Broker Remarks Generator</h4>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <pre>Write 5 compelling broker remarks for MLS that will attract buyer agents to show this property:
+
+PROPERTY TYPE: [Type]
+KEY FEATURES: [Features]
+UNIQUE ADVANTAGES: [What agents should know]
+SHOWING INSTRUCTIONS: [Any special requirements]
+
+Make them attention-grabbing and focus on what agents care about: commission protection, easy showing access, motivated seller, unique features their buyers are seeking.</pre>
+                </div>
+
+                <div class="notes-section">
+                    <h4>NOTES: My best performing listing description formula</h4>
+                    <textarea class="notes-field" data-key="chatgpt-listing-formula" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <hr>
+
+                <h3>Tool 2: Solar Analysis Tool</h3>
+
+                <p><strong>The Problem:</strong> Solar consultants charge $300-500 and take days to provide analysis.</p>
+
+                <p><strong>The AI Solution:</strong> Upload property image, get instant solar potential assessment.</p>
+
+                <h4>HOW TO USE:</h4>
+
+                <p><strong>Step 1:</strong> Take or obtain aerial/satellite photo of property roof</p>
+
+                <p><strong>Step 2:</strong> In ChatGPT Plus, click the image upload button</p>
+
+                <p><strong>Step 3:</strong> Upload image and use this prompt:</p>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <strong>Solar Potential Analysis Prompt</strong>
+                    <pre>Analyze this property's rooftop for solar panel installation potential.
+
+Provide:
+1. Estimated usable roof square footage for panels
+2. Roof orientation analysis (south-facing is ideal)
+3. Visible shading concerns from trees/structures
+4. Approximate system size capacity (in kW)
+5. Estimated annual energy production
+6. Rough cost-benefit analysis for homeowner
+7. Environmental impact (CO2 offset)
+
+Format as a professional summary I can share with potential buyers interested in sustainability.</pre>
+                </div>
+
+                <h4>USE CASES:</h4>
+                <ul>
+                    <li><strong>Luxury Listings</strong> - Add $50K-100K value proposition</li>
+                    <li><strong>Eco-Conscious Buyers</strong> - Show environmental leadership</li>
+                    <li><strong>Investment Properties</strong> - Demonstrate utility cost savings</li>
+                    <li><strong>New Construction</strong> - Design-phase planning</li>
+                </ul>
+
+                <div class="notes-section">
+                    <h4>NOTES: Properties in my pipeline that would benefit from solar analysis</h4>
+                    <textarea class="notes-field" data-key="chatgpt-solar" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <hr>
+
+                <h3>Tool 3: Market Research Agent</h3>
+
+                <p><strong>The Problem:</strong> Comprehensive market research takes 6-8 hours and costs $200-300.</p>
+
+                <p><strong>The AI Solution:</strong> AI can execute multi-step research in minutes.</p>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <strong>MASTER RESEARCH PROMPT</strong>
+                    <pre>I need a comprehensive market analysis. Execute these steps in order:
+
+STEP 1: Analyze [Property Type] sales trends in [Area] from [Year] to [Year]
+- Price trends
+- Days on market
+- Price per square foot evolution
+- Absorption rates
+
+STEP 2: Identify the top 5 factors driving price changes
+- Market conditions
+- Economic factors
+- Demographic shifts
+- Development/infrastructure
+
+STEP 3: Create a 10-slide presentation outline for [Buyer/Seller]
+- Each slide title
+- Key talking points
+- Supporting data needed
+
+STEP 4: Write a personalized email to prospects explaining market conditions
+- Subject line
+- Body (200-250 words)
+- Call to action
+
+STEP 5: Anticipate 5 objections [Buyers/Sellers] might have
+- List objection
+- Provide response for each
+
+Format everything clearly with headers so I can easily extract each section.</pre>
+                </div>
+
+                <h4>Neighborhood Analysis</h4>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <pre>Provide a comprehensive neighborhood analysis for [Neighborhood Name]:
+
+Include:
+- Demographics and household income ranges
+- School ratings and education quality
+- Amenities within 2 miles (dining, shopping, recreation)
+- Recent development and infrastructure projects
+- Property value trends (5-year outlook)
+- Ideal buyer persona for this area
+- Marketing angle recommendations
+
+Format as a neighborhood guide I can send to potential buyers.</pre>
+                </div>
+
+                <div class="notes-section">
+                    <h4>NOTES: Market research topics I need to explore</h4>
+                    <textarea class="notes-field" data-key="chatgpt-research" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <hr>
+
+                <h3>Tool 4: Visual Content Creator</h3>
+
+                <p><strong>The Problem:</strong> Graphic designers charge $75-150 per graphic. Creating infographics is time-consuming.</p>
+
+                <p><strong>The AI Solution:</strong> Generate visual concepts and data visualizations in minutes.</p>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <strong>Market Stats Infographic</strong>
+                    <pre>I have market statistics I want to turn into a shareable infographic:
+
+DATA:
+[Paste your stats - median price, sales volume, inventory, etc.]
+
+Create:
+1. A catchy title for this infographic
+2. 3-5 key statistics to highlight (choose the most compelling)
+3. Layout suggestion (vertical/horizontal, sections)
+4. Color scheme recommendation for luxury real estate
+5. Supporting text for each statistic
+6. A call-to-action at the bottom
+
+Format this as instructions I can give to a designer or Canva.</pre>
+                </div>
+
+                <div class="notes-section">
+                    <h4>NOTES: Visual content ideas for my current listings</h4>
+                    <textarea class="notes-field" data-key="chatgpt-visual" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <hr>
+
+                <h3>Tool 5: The FOS Detector (Full of Sh*t Detector)</h3>
+
+                <p><strong>The Problem:</strong> Marketing claims, listing descriptions, seller disclosures, and competitor promises are often exaggerated—or downright false.</p>
+
+                <p><strong>The AI Solution:</strong> Run any text through an LLM to detect BS, scams, exaggerations, and lies on a 1-10 truthfulness scale.</p>
+
+                <div class="callout callout-orange">
+                    <strong>FOS Scale:</strong>
+                    <p><strong>1-2</strong> = Total lie, complete scam<br>
+                    <strong>3-4</strong> = Mostly false, heavy exaggeration<br>
+                    <strong>5-6</strong> = Half-truths, misleading framing<br>
+                    <strong>7-8</strong> = Mostly truthful, minor exaggerations<br>
+                    <strong>9-10</strong> = Completely truthful, verifiable</p>
+                </div>
+
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <strong>PRIMARY FOS DETECTOR PROMPT</strong>
+                    <pre>You are the FOS (Full of Sh*t) Detector. Analyze the following text
+for truthfulness, exaggeration, misleading claims, and scam indicators.
+
+TEXT TO ANALYZE:
+"[Paste the text here]"
+
+Provide:
+
+1. FOS SCORE (1-10 scale)
+   1-2 = Complete lie/scam
+   3-4 = Mostly false/heavy exaggeration
+   5-6 = Half-truths/misleading
+   7-8 = Mostly truthful/minor exaggeration
+   9-10 = Completely truthful/verifiable
+
+2. SPECIFIC RED FLAGS
+   List each problematic claim, phrase, or omission with explanation
+
+3. TRUTH VS. SPIN ANALYSIS
+   - What's actually true (if anything)
+   - What's exaggerated
+   - What's misleading
+   - What's completely false
+
+4. WHAT THEY'RE NOT TELLING YOU
+   Obvious omissions or convenient gaps in the narrative
+
+5. VERDICT
+   One-sentence summary: Is this trustworthy or bullsh*t?
+
+Be direct. Be blunt. Call out BS when you see it.</pre>
+                </div>
+
+                <h4>USE CASES:</h4>
+                <ul>
+                    <li>✅ Seller disclosures</li>
+                    <li>✅ Competitor marketing</li>
+                    <li>✅ Investment pitches</li>
+                    <li>✅ Contractor estimates</li>
+                    <li>✅ HOA claims</li>
+                    <li>✅ Your own marketing (self-audit)</li>
+                    <li>✅ Listing descriptions (yours and others)</li>
+                </ul>
+
+                <div class="notes-section">
+                    <h4>PRACTICE EXERCISE: Find 3 pieces of marketing and run them through FOS Detector</h4>
+                    <textarea class="notes-field" data-key="chatgpt-fos-practice" placeholder="Example 1:
+Text:
+FOS Score:
+Main Issues:
+
+Example 2:
+..."></textarea>
+                </div>
+
+                <div class="callout callout-cyan">
+                    <strong>Want personalized prompts for your specific market?</strong>
+                    <p>Bogen.AI specializes in custom AI integration for real estate professionals. Edmund offers office trainings where your entire team learns together.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 3: CLAUDE PROJECTS -->
+        <div class="section">
+            <div class="section-header">PART 3: CLAUDE PROJECTS</div>
+            <div class="section-content">
+                <h3>Introduction to Claude</h3>
+
+                <p><strong>What Makes Claude Different:</strong></p>
+                <ul>
+                    <li>Longer context window (remembers more)</li>
+                    <li>Better at analysis and long-form content</li>
+                    <li>Projects feature = specialized AI assistants</li>
+                    <li>Superior for document analysis</li>
+                </ul>
+
+                <p><strong>When to Use Claude vs. ChatGPT:</strong></p>
+                <ul>
+                    <li><strong>ChatGPT:</strong> Quick content, images, research</li>
+                    <li><strong>Claude:</strong> Deep analysis, long documents, specialized tasks</li>
+                </ul>
 
                 <h4>Getting Started</h4>
                 <ol>
-                    <li>Go to <strong>claude.ai</strong> and create an account</li>
-                    <li>Subscribe to <strong>Claude Pro</strong> ($20/month) for Projects feature</li>
-                    <li>Click "Projects" in the sidebar</li>
-                    <li>Create your first project</li>
+                    <li>Go to claude.ai</li>
+                    <li>Sign up (Free or Pro $20/month)</li>
+                    <li>Verify email</li>
+                    <li>Explore the Projects feature (Pro only)</li>
                 </ol>
 
-                <h3>Essential Claude Projects for Realtors</h3>
+                <hr>
 
-                <h4>Project 1: Client Profile Manager</h4>
-                <p><strong>Purpose:</strong> Maintain detailed client profiles with preferences, history, and communication notes.</p>
+                <h3>The CMA Factory Setup</h3>
+
+                <p><strong>The Goal:</strong> Create an AI assistant that generates personalized CMAs for your specific farm area in 60 seconds.</p>
+
+                <p><strong>Why This Works:</strong> Unlike generic AI, a Claude Project KNOWS your market, your credentials, your community, and has access to real MLS data. It becomes your specialized CMA assistant.</p>
+
+                <h4>STEP-BY-STEP SETUP</h4>
+
+                <p><strong>Step 1: Create New Project</strong></p>
+                <ol>
+                    <li>Click "Projects" in Claude</li>
+                    <li>Click "New Project"</li>
+                    <li>Name it: "[Your Farm Area] CMA Generator"</li>
+                    <li>Write description: "Generates custom CMAs for properties in [Your Farm Area]"</li>
+                </ol>
+
+                <p><strong>Step 2: Upload Your Knowledge Base</strong></p>
+
+                <p>This is what makes your project unique to YOUR farm area.</p>
+
+                <h4>Document 1: Your Bio</h4>
+                <p>Create a document with:</p>
+                <ul>
+                    <li>Your name and credentials (licenses, designations)</li>
+                    <li>Years of experience</li>
+                    <li>Specialization/expertise in this farm area</li>
+                    <li>Why you focus on this specific community</li>
+                    <li>Notable achievements and sales in the area</li>
+                    <li>Awards and recognition</li>
+                    <li>Your value proposition</li>
+                    <li>Contact information</li>
+                </ul>
+
+                <h4>Document 2: Team Information</h4>
+                <ul>
+                    <li>Team members and their roles</li>
+                    <li>Each person's expertise</li>
+                    <li>Services your team provides</li>
+                    <li>What makes your team unique in this market</li>
+                </ul>
+
+                <h4>Document 3: Company Information</h4>
+                <ul>
+                    <li>Brokerage name and history</li>
+                    <li>Company market position</li>
+                    <li>Marketing resources available</li>
+                    <li>Technology and tools you use</li>
+                </ul>
+
+                <h4>Document 4: Realtors Code of Ethics</h4>
+                <p>Upload the NAR Code of Ethics document.</p>
+
+                <h4>Document 5: Community Information</h4>
+                <p>Create a comprehensive document about YOUR farm area:</p>
+                <ul>
+                    <li><strong>Demographics:</strong> Population, income ranges, age demographics</li>
+                    <li><strong>Amenities:</strong> Schools, shopping, dining, recreation, healthcare</li>
+                    <li><strong>Infrastructure:</strong> Major employers, transportation, upcoming developments</li>
+                    <li><strong>Lifestyle:</strong> What makes this community special</li>
+                    <li><strong>Market Dynamics:</strong> Appreciation rates, seasonal patterns, typical DOM</li>
+                </ul>
+
+                <h4>Document 6: MLS Data - Active Listings</h4>
+                <p>Current properties on the market in your farm area. Include: Address, list price, square footage, beds/baths, year built, key features, DOM, price per SF. Update monthly.</p>
+
+                <h4>Document 7: MLS Data - Sold Properties (Last 12 Months)</h4>
+                <p>Closed sales in your farm area from the past year. Include: Address, sale price, original list price, square footage, beds/baths, DOM, sale date, price per SF.</p>
+
+                <h4>Document 8: CMA Instructions</h4>
 
                 <div class="prompt-box">
                     <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>PROJECT NAME: Client Profile Manager
+                    <strong>Copy this into a document and upload to your Claude Project:</strong>
+                    <pre>You are a CMA (Comparative Market Analysis) generator for [Your Name],
+a real estate professional specializing in [Your Farm Area].
 
-PROJECT KNOWLEDGE:
-You are my personal client relationship manager for real estate. Your role is to help me maintain detailed profiles of every client, track our interactions, remember their preferences, and suggest personalized approaches.
+You have access to:
+- My professional background and credentials
+- My team's capabilities
+- My brokerage information
+- The NAR Code of Ethics
+- Comprehensive community information for this market
+- Current active listings in the farm area
+- 12 months of closed sales data
 
-For each client, track:
-
-BASIC INFO:
-- Name and contact details
-- Budget range
-- Timeline
-- Financing status
-
-PREFERENCES:
-- Must-haves vs nice-to-haves
-- Lifestyle needs
-- Neighborhood preferences
-- Style preferences
-
-HISTORY:
-- Properties viewed
-- Feedback on each
-- Communication notes
-- Important dates
-
-STRATEGY:
-- Personalized search strategy
-- Communication preferences
-- Follow-up schedule
-- Special considerations
-
-When I add a new client or update information, help me organize it consistently. When I ask about a client, provide a complete summary and suggest next steps.
+When I provide an address or property description, generate a
+comprehensive CMA using this format:
 
 ---
+PROPERTY OVERVIEW
+- Subject property details
+- Neighborhood/community context
+- Current market position in this specific farm area
 
-NEW CLIENT ENTRY TEMPLATE:
-
-Name: [Client Name]
-Date Added: [Date]
-Source: [Referral/Open House/etc]
-
-Contact:
-- Email:
-- Phone:
-- Preferred method:
-- Best time to reach:
-
-Search Criteria:
-- Budget: $[Min] - $[Max]
-- Location: [Areas]
-- Bedrooms:
-- Bathrooms:
-- Must-haves:
-- Deal-breakers:
-
-Personal Notes:
-- Family situation:
-- Career:
-- Lifestyle:
-- Hobbies:
-- Timeline:
-- Motivation for move:
-
-Status: [Active search/Casual looking/Under contract]
-
-Next Steps:
-1. [Action item]
-2. [Action item]</pre>
-                </div>
-
-                <label class="notes-label">YOUR NOTES: What client information do you want to track?</label>
-                <textarea class="notes-area" placeholder="Customize the client tracking template..." data-storage-key="claude-client-notes"></textarea>
-
-                <h4>Project 2: Market Intelligence Hub</h4>
-                <p><strong>Purpose:</strong> Build a knowledge base about your local market that you can query anytime.</p>
-
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>PROJECT NAME: [Your City] Market Intelligence Hub
-
-PROJECT KNOWLEDGE:
-You are my personal market intelligence analyst for [Your Market Area]. Help me track trends, analyze data, and provide insights about the local real estate market.
-
-MARKET OVERVIEW:
-- Primary markets: [List your neighborhoods]
-- Typical buyer demographics
-- Average price ranges by area
-- Key market drivers
-
-NEIGHBORHOODS:
-For each neighborhood, track:
-- Average home prices
-- Days on market
-- Inventory levels
-- School districts
-- Amenities and attractions
-- Transportation
-- Development projects
-- Market trends
-
-RECENT SALES:
-Maintain a log of notable sales:
+ACTIVE COMPETING LISTINGS
+Select 3-5 most comparable active listings from the MLS data:
 - Address
-- Sale price
+- List price and days on market
+- Key features comparison to subject property
+- Price per SF comparison
+- Why buyer might choose this vs subject property
+- Competitive positioning analysis
+
+CLOSED COMPARABLE SALES (LAST 12 MONTHS)
+Select 5-7 most relevant sold properties from the 12-month data:
+- Address and sale date
+- Sale price and original list price
 - Days on market
-- Special circumstances
-- Lessons learned
+- Key features comparison
+- Price per SF comparison
+- Adjustments explanation (if property differs from subject)
+- What this comp tells us about the market
 
-COMPETITIVE ANALYSIS:
-- Top agents in area
-- Common pricing strategies
-- Marketing approaches
-- Market positioning
+MARKET TRENDS ANALYSIS
+Based on the 12-month sales data:
+- Price trends (are values rising, stable, or declining?)
+- Seasonal patterns observed
+- Days on market trends
+- Inventory levels (tight or balanced?)
+- Buyer demand indicators
 
-When I ask about the market, provide data-driven insights with specific examples. Help me identify opportunities and risks.
+COMMUNITY CONTEXT
+Reference the community information to explain:
+- Why buyers choose this area
+- Amenities that add value
+- Any upcoming developments affecting value
+- School district considerations (if relevant)
+
+PRICING RECOMMENDATION
+Based on all data above:
+- Suggested list price (if seller CMA)
+- OR suggested offer range (if buyer CMA)
+- Justification using comps and market trends
+- Market timing considerations (best time to list/buy)
+- Strategy recommendations
+
+ADHERENCE TO ETHICS
+Ensure all recommendations comply with NAR Code of Ethics,
+particularly around:
+- Honest pricing guidance
+- Disclosure of market conditions
+- Fair treatment of all parties
+
+NEXT STEPS & PERSONAL NOTE FROM [YOUR NAME]
+- Recommended immediate action steps
+- Consultation invitation
+- Personal insight based on my [X] years specializing in this market
+- Why my team is uniquely qualified to help
 
 ---
 
-WEEKLY MARKET UPDATE TEMPLATE:
+Always end with:
+"This analysis was prepared by [Your Name] using AI-powered market
+data combined with my [X] years of expertise in [Farm Area]. All data
+has been verified for accuracy. Contact me at [Phone/Email] to discuss
+this property and develop a customized strategy."
 
-Week of [Date]
-
-New Listings:
-- [Address] - $[Price] - [Key details]
-
-Recent Sales:
-- [Address] - $[Price] - [Days on market] - [Notes]
-
-Price Changes:
-- [Address] - [Old price] → [New price] - [Analysis]
-
-Market Insights:
-[What trends are you seeing?]
-
-Opportunities:
-[Properties or strategies to pursue]</pre>
+Maintain a professional, consultative tone. Focus on insights and
+strategy, not just data. Make it clear why THIS specific market
+knowledge matters.</pre>
                 </div>
 
-                <h4>Project 3: Transaction Coordinator</h4>
-                <p><strong>Purpose:</strong> Track every detail of active transactions from offer to close.</p>
+                <h4>Step 4: Test Your CMA Generator</h4>
+
+                <p>In your Claude Project chat, type:</p>
 
                 <div class="prompt-box">
                     <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>PROJECT NAME: Transaction Coordinator
-
-PROJECT KNOWLEDGE:
-You are my transaction coordinator assistant. Help me manage every detail of active real estate transactions, track deadlines, and ensure nothing falls through the cracks.
-
-For each transaction, maintain:
-
-PROPERTY INFO:
-- Address
-- Purchase price
-- Buyer(s) and Seller(s)
-- Transaction type (buyer/seller representation)
-- MLS number
-
-KEY DATES:
-- Offer acceptance date
-- Inspection contingency deadline
-- Appraisal contingency deadline
-- Financing contingency deadline
-- Title contingency deadline
-- Closing date
-
-PARTIES:
-- Listing agent
-- Buyer's agent
-- Lender
-- Title/Escrow officer
-- Inspector
-- Appraiser
-- Attorney (if applicable)
-
-CHECKLIST:
-□ Offer accepted
-□ Earnest money deposited
-□ Inspection scheduled
-□ Inspection completed
-□ Inspection response sent
-□ Inspection negotiations complete
-□ Appraisal ordered
-□ Appraisal received
-□ Final walkthrough scheduled
-□ Closing documents reviewed
-□ Funds wired
-□ Closing completed
-
-NOTES AND ISSUES:
-[Track any complications or special circumstances]
-
-When I start a new transaction, help me set it up. When I update you, track changes. Alert me to upcoming deadlines and suggest what to do next.
-
----
-
-NEW TRANSACTION TEMPLATE:
-
-Property: [Address]
-Buyer: [Name]
-Seller: [Name]
-Price: $[Amount]
-Offer Accepted: [Date]
-Projected Close: [Date]
-
-Status: [In contract/Pending/Clear to close]
-
-This Week's Action Items:
-1. [Task] - Due [Date]
-2. [Task] - Due [Date]
-
-Upcoming Deadlines:
-- [Deadline] - [Date]
-
-Notes:
-[Any special circumstances or concerns]</pre>
+                    <pre>Create a CMA for a 4-bedroom, 3-bathroom home at [Address or description]
+for a seller consultation. They want to list in the next 30 days.</pre>
                 </div>
-
-                <h4>Project 4: Content Library Manager</h4>
-                <p><strong>Purpose:</strong> Build a library of your best content, templates, and resources.</p>
-
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>PROJECT NAME: Content Library Manager
-
-PROJECT KNOWLEDGE:
-You manage my library of real estate content, templates, and resources. Help me organize, retrieve, and repurpose content efficiently.
-
-CATEGORIES:
-
-1. EMAIL TEMPLATES
-- First contact
-- Follow-up sequences
-- Listing updates
-- Market reports
-- Thank you notes
-
-2. SOCIAL MEDIA CONTENT
-- Post ideas and captions
-- Hashtag groups
-- Story templates
-- Reel scripts
-
-3. LISTING MATERIALS
-- Property description templates
-- Feature highlights
-- Neighborhood descriptions
-- Call-to-action phrases
-
-4. CLIENT RESOURCES
-- Buyer guides
-- Seller guides
-- Process timelines
-- FAQ responses
-- Local vendor lists
-
-5. SCRIPTS AND DIALOGUES
-- Objection handlers
-- Phone scripts
-- Showing feedback requests
-- Negotiation frameworks
-
-When I ask for content, search the library and provide relevant templates. When I share new content that works well, help me save it with tags and categories.
-
-When I need to repurpose content, suggest ways to adapt it for different platforms or audiences.
-
----
-
-SAVE NEW CONTENT TEMPLATE:
-
-Title: [Content Name]
-Type: [Email/Social/Script/etc]
-Category: [Specific category]
-Tags: [Searchable keywords]
-
-Content:
-[The actual content]
-
-Use Cases:
-- [When to use this]
-- [Best for which audience]
-
-Performance Notes:
-[How well did it work? Any results?]</pre>
-                </div>
-
-                <h3>Advanced Claude Techniques</h3>
 
                 <div class="callout callout-lime">
-                    <strong>🚀 Power User Tip: Upload Documents</strong>
-                    <p>In any Claude conversation, you can upload PDFs, Word docs, or text files. This is perfect for:</p>
-                    <ul>
-                        <li>Analyzing contracts</li>
-                        <li>Summarizing inspection reports</li>
-                        <li>Extracting key details from disclosure forms</li>
-                        <li>Converting documents to different formats</li>
-                    </ul>
+                    <strong>THE DAILY CMA STRATEGY</strong>
+                    <p><strong>Game-Changer:</strong> Send ONE farm-area-specific CMA daily to prospects.</p>
+                    <p><strong>Result:</strong> 365 high-value, personalized touches per year to prospects in YOUR specific farm area vs. average agent's 12 generic touches</p>
                 </div>
 
-                <h4>Document Analysis Prompt</h4>
+                <div class="notes-section">
+                    <h4>NOTES: My farm area focus and daily CMA targets</h4>
+                    <textarea class="notes-field" data-key="claude-cma-targets" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <hr>
+
+                <h3>HOA Financial Analyzer</h3>
+
+                <p><strong>The Problem:</strong> Analyzing HOA financials requires financial expertise and costs $200-400.</p>
+
+                <p><strong>The AI Solution:</strong> Upload documents to Claude, get instant professional analysis.</p>
+
                 <div class="prompt-box">
                     <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>[Upload your document to Claude]
+                    <strong>Upload this prompt as project instructions:</strong>
+                    <pre>You are an HOA financial analyst for real estate transactions.
 
-I've uploaded a [contract/report/disclosure]. Please analyze it and provide:
+When I upload HOA financial documents (budgets, reserves, assessments), analyze and provide:
 
-1. Executive Summary (3-4 sentences)
-2. Key Terms and Conditions
-3. Important Dates and Deadlines
-4. Potential Risks or Red Flags
-5. Items That Need My Attention
-6. Questions I Should Ask
-7. Suggested Next Steps
+FINANCIAL HEALTH SCORE (1-10 scale)
+- Overall assessment
+- Score justification
 
-Present this in a clear, organized format that I can share with my client.</pre>
+RED FLAGS ANALYSIS
+- Underfunded reserves
+- High delinquency rates
+- Upcoming special assessments
+- Deferred maintenance
+- Legal/litigation issues
+- Insurance problems
+
+RESERVE FUND ANALYSIS
+- Current reserve balance
+- Recommended reserve balance (industry standard)
+- Reserve funding percentage
+- Reserve study status
+
+MONTHLY FEE ASSESSMENT
+- Monthly HOA fees
+- What fees cover
+- Comparison to market average
+- Likelihood of increases
+- Special assessment history
+
+BUYER RECOMMENDATION
+Choose one and explain:
+- BUY WITH CONFIDENCE: Solid financials, well-managed
+- PROCEED WITH CAUTION: Minor concerns, investigate further
+- HIGH RISK: Serious issues, consider walking away
+
+TALKING POINTS FOR BUYER PRESENTATION
+Provide 5 key points to discuss with buyers about this HOA.
+
+Format as a professional report I can share with buyers.</pre>
                 </div>
 
-                <label class="notes-label">YOUR NOTES: What Claude Projects will you create first?</label>
-                <textarea class="notes-area" placeholder="Plan your Claude Projects strategy..." data-storage-key="claude-projects-notes"></textarea>
-
-                <h3>ChatGPT vs Claude: When to Use Each</h3>
-
-                <div class="grid-2">
-                    <div class="card">
-                        <h4>Use ChatGPT For:</h4>
-                        <ul>
-                            <li>Quick content creation</li>
-                            <li>Social media posts</li>
-                            <li>Brainstorming ideas</li>
-                            <li>Email responses</li>
-                            <li>Property descriptions</li>
-                            <li>Creative writing</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4>Use Claude For:</h4>
-                        <ul>
-                            <li>Long-term projects</li>
-                            <li>Client management</li>
-                            <li>Document analysis</li>
-                            <li>Complex research</li>
-                            <li>Transaction tracking</li>
-                            <li>Consistent workflows</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Virtual Staging Section -->
-        <section id="virtual-staging" class="section">
-            <div class="section-header">Part 3: Virtual Staging & Visual Content</div>
-            <div class="section-content">
-                <h3>The Power of Visual Content</h3>
-
-                <p>In real estate, visuals sell homes. AI-powered image generation and enhancement tools can help you create stunning marketing materials at a fraction of traditional costs.</p>
-
-                <div class="callout callout-orange">
-                    <strong>💰 Cost Savings</strong>
-                    <p>Traditional staging: $2,000-5,000 per property<br>
-                    Virtual staging: $25-75 per room<br>
-                    AI virtual staging: $10-30 per room</p>
+                <div class="notes-section">
+                    <h4>NOTES: HOA communities I work with regularly</h4>
+                    <textarea class="notes-field" data-key="claude-hoa" placeholder="Write your notes here..."></textarea>
                 </div>
 
-                <h3>Virtual Staging Tools</h3>
+                <hr>
 
-                <h4>Recommended Platforms</h4>
+                <h3>Content Factory from Conversations</h3>
+
+                <p><strong>The Strategy:</strong> One recorded conversation = 2 weeks of content.</p>
+
+                <h4>THE WORKFLOW</h4>
+
+                <p><strong>Step 1: Record Everything</strong></p>
+                <ul>
+                    <li>Buyer consultations</li>
+                    <li>Seller presentations</li>
+                    <li>Market update videos</li>
+                    <li>Training sessions</li>
+                </ul>
+
+                <p><strong>Step 2: Transcribe with Otter.ai</strong></p>
                 <ol>
-                    <li><strong>Virtual Staging AI</strong> (virtualstagingai.app)
-                        <ul>
-                            <li>Best for: Quick, realistic staging</li>
-                            <li>Cost: ~$16 for 4 images</li>
-                            <li>Turnaround: Instant</li>
-                        </ul>
-                    </li>
-                    <li><strong>Styldod</strong> (styldod.com)
-                        <ul>
-                            <li>Best for: Professional results</li>
-                            <li>Cost: $24-39 per image</li>
-                            <li>Turnaround: 24-48 hours</li>
-                        </ul>
-                    </li>
-                    <li><strong>VisualStager</strong> (visualstager.com)
-                        <ul>
-                            <li>Best for: Variety of styles</li>
-                            <li>Cost: Subscription-based</li>
-                            <li>Turnaround: Instant</li>
-                        </ul>
-                    </li>
+                    <li>Record meeting in Otter.ai app</li>
+                    <li>Wait for transcript (usually immediate)</li>
+                    <li>Export as text file</li>
+                    <li>Upload to Claude</li>
                 </ol>
 
-                <h3>Virtual Staging Best Practices</h3>
+                <p><strong>Step 3: Content Generation</strong></p>
 
-                <h4>1. Start With Quality Photos</h4>
-                <ul>
-                    <li>Use well-lit, straight-on shots</li>
-                    <li>Empty rooms work best</li>
-                    <li>Clean the space first</li>
-                    <li>Avoid extreme angles</li>
-                </ul>
+                <div class="prompt-box">
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    <strong>CONTENT FACTORY MEGA-PROMPT</strong>
+                    <pre>I'm uploading a transcript from [Meeting Type].
+Extract maximum value by creating:
 
-                <h4>2. Choose Appropriate Styles</h4>
-                <ul>
-                    <li>Match the home's architecture</li>
-                    <li>Consider your target buyer</li>
-                    <li>Stay neutral for broad appeal</li>
-                    <li>Showcase the room's potential</li>
-                </ul>
+1. EXECUTIVE SUMMARY (200 words)
+   - Key topics discussed
+   - Main takeaways
+   - Action items
 
-                <h4>3. Disclose Virtual Staging</h4>
+2. SOCIAL MEDIA CONTENT (10 posts)
+   - 3 Instagram posts (with emoji + hashtags)
+   - 3 LinkedIn posts (professional, thought leadership)
+   - 2 Facebook posts (conversational)
+   - 2 Twitter/X threads (concise, engaging)
+
+3. INSTAGRAM REEL CONCEPTS (5 ideas)
+   - Hook (first 3 seconds)
+   - Content outline (15-30 seconds)
+   - Call-to-action
+   - Caption
+
+4. EMAIL SEQUENCE (3 emails)
+   - Email 1: Value-first nurture
+   - Email 2: Educational content
+   - Email 3: Soft call-to-action
+   (Subject lines + body copy for each)
+
+5. BLOG POST OUTLINE (800-1000 words)
+   - SEO-friendly title
+   - Introduction
+   - 3-5 main sections with subheadings
+   - Conclusion with CTA
+   - Meta description
+
+6. LINKEDIN ARTICLE (Structure only)
+   - Professional headline
+   - Key sections
+   - Industry insights angle
+
+Pull the most compelling quotes, statistics, and insights from the transcript.
+Make everything on-brand for a luxury real estate professional.</pre>
+                </div>
+
                 <div class="callout callout-cyan">
-                    <strong>⚖️ Legal Requirement</strong>
-                    <p>Always clearly label virtually staged photos as "Virtually Staged" or "Digitally Enhanced." This is not just ethical—it's legally required in most jurisdictions.</p>
+                    <strong>CONTENT CALENDAR STRATEGY</strong>
+                    <p><strong>Monday:</strong> Record weekly market update (10 min)<br>
+                    <strong>Tuesday:</strong> Generate content from transcript<br>
+                    <strong>Wednesday-Sunday:</strong> Schedule and post content<br>
+                    <strong>Result:</strong> 10+ pieces of content from one 10-minute recording</p>
                 </div>
 
-                <h3>AI Image Enhancement</h3>
+                <div class="notes-section">
+                    <h4>NOTES: Content ideas from recent conversations</h4>
+                    <textarea class="notes-field" data-key="claude-content" placeholder="Write your notes here..."></textarea>
+                </div>
 
-                <h4>Tools for Better Photos</h4>
+                <div class="callout callout-orange">
+                    <strong>Need help setting up Claude Projects?</strong>
+                    <p>Bogen.AI offers personalized setup sessions. Contact Edmund for private coaching to build your custom AI systems.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 4: VIRTUAL STAGING & VISUALS -->
+        <div class="section">
+            <div class="section-header">PART 4: VIRTUAL STAGING & VISUALS</div>
+            <div class="section-content">
+                <h3>Google Nano Banana Tutorial</h3>
+
+                <div class="callout callout-lime">
+                    <strong>The ROI:</strong>
+                    <p>Traditional staging: $75-150/room<br>
+                    Average listing: 5-7 rooms = $375-1,050<br>
+                    20 listings/year = $7,500-21,000<br>
+                    Google Nano Banana: <strong>FREE</strong></p>
+                </div>
+
+                <h4>STEP-BY-STEP TUTORIAL</h4>
+
+                <p><strong>Step 1: Prepare Your Photos</strong></p>
                 <ul>
-                    <li><strong>Adobe Lightroom AI:</strong> Auto-enhance features</li>
-                    <li><strong>Luminar AI:</strong> Sky replacement, structure enhancement</li>
-                    <li><strong>Photoroom:</strong> Background removal</li>
-                    <li><strong>Remove.bg:</strong> Quick background removal</li>
+                    <li>Take or obtain high-quality room photos</li>
+                    <li>Empty rooms work best</li>
+                    <li>Good lighting is essential</li>
+                    <li>Multiple angles per room</li>
                 </ul>
 
-                <h3>AI-Generated Marketing Graphics</h3>
+                <p><strong>Step 2: Access Google Nano Banana</strong></p>
+                <p>[Access tool online - search for "Google Nano Banana virtual staging"]</p>
 
-                <h4>Using ChatGPT/DALL-E for Real Estate Graphics</h4>
-                <p>ChatGPT Plus includes access to DALL-E 3, which can create custom graphics for social media, flyers, and presentations.</p>
-
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>Create a [Instagram post/Facebook header/flyer background] for a real estate listing:
-
-Property Type: [Modern condo/Traditional home/Luxury estate]
-Style: [Minimalist/Bold/Elegant]
-Color Scheme: [Your brand colors]
-
-The image should convey: [Luxury/Family-friendly/Investment opportunity]
-
-Include elements like: [City skyline/Nature/Modern architecture]
-
-Do NOT include text or people. Just the background/scene.</pre>
-                </div>
-
-                <h4>Creating Property Feature Graphics</h4>
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>Create a clean, modern graphic showing a [kitchen/outdoor space/living room] that represents:
-
-Style: [Contemporary/Traditional/Transitional]
-Features to highlight: [Large island/Open concept/Natural light]
-Mood: [Warm and inviting/Sleek and modern/Cozy and comfortable]
-Color palette: [Whites and grays/Earth tones/Bold colors]
-
-Make it photorealistic and suitable for luxury real estate marketing.</pre>
-                </div>
-
-                <h3>Video Content Creation</h3>
-
-                <h4>AI Video Tools</h4>
+                <p><strong>Step 3: Upload and Stage</strong></p>
                 <ul>
-                    <li><strong>Descript:</strong> Edit video like a document</li>
-                    <li><strong>Runway ML:</strong> AI video effects and enhancements</li>
-                    <li><strong>Pictory:</strong> Turn scripts into videos</li>
-                    <li><strong>Synthesia:</strong> AI avatar videos (for educational content)</li>
+                    <li>Upload room photo</li>
+                    <li>Select staging style: Modern Contemporary, Traditional Elegant, Coastal Casual, Minimalist, Luxury</li>
+                    <li>Adjust as needed</li>
+                    <li>Download staged image</li>
                 </ul>
 
-                <h4>Quick Video Script Template</h4>
+                <p><strong>Step 4: Before/After Marketing</strong></p>
+                <ul>
+                    <li>Create side-by-side comparisons</li>
+                    <li>Use in listing materials</li>
+                    <li>Post on social media</li>
+                    <li>Include in email campaigns</li>
+                </ul>
+
+                <h4>PRO TIPS</h4>
+                <ul>
+                    <li>✅ Stage living room, master bedroom, and main gathering spaces first</li>
+                    <li>✅ Keep staging style consistent throughout property</li>
+                    <li>✅ Don't over-stage - let rooms breathe</li>
+                    <li>✅ Use staged photos for marketing, originals for MLS disclosure</li>
+                    <li>✅ Mention "virtually staged" in disclosures</li>
+                </ul>
+
+                <div class="notes-section">
+                    <h4>NOTES: Properties that need virtual staging</h4>
+                    <textarea class="notes-field" data-key="staging-properties" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <hr>
+
+                <h3>Creating Property Videos</h3>
+
                 <div class="prompt-box">
                     <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>Create a 60-second video script for a [property tour/market update/buyer tip]:
+                    <strong>Property Video Script Prompt</strong>
+                    <pre>Create a 60-second property video script for:
 
-Topic: [Specific subject]
-Target Audience: [Who is this for?]
-Key Message: [Main takeaway]
-Call-to-Action: [What should viewers do?]
+PROPERTY: [Details]
+KEY FEATURES: [List]
+TARGET BUYER: [Demographic]
+TONE: [Luxurious/Family-friendly/Investment-focused]
 
-Format the script with:
-- Hook (first 5 seconds)
-- Main content (middle 50 seconds)
-- Call-to-action (final 5 seconds)
+Format:
+[0-5 seconds]: Hook/Opening
+[5-20 seconds]: Lifestyle introduction
+[20-45 seconds]: Feature highlights (3-4 key features)
+[45-55 seconds]: Call-to-action
+[55-60 seconds]: Contact information
 
 Include suggestions for:
-- B-roll footage to show
-- Text overlays
+- Visual shots for each section
 - Background music style
-
-Keep it conversational and engaging.</pre>
+- Text overlays
+- Transitions</pre>
                 </div>
 
-                <label class="notes-label">YOUR NOTES: Which visual content tools will you implement first?</label>
-                <textarea class="notes-area" placeholder="Plan your visual content strategy..." data-storage-key="visual-content-notes"></textarea>
-
-                <h3>Building Your Visual Brand</h3>
-
-                <div class="callout callout-lime">
-                    <strong>🎨 Consistency is Key</strong>
-                    <p>Use AI tools to maintain consistent colors, fonts, and style across all your marketing materials. This builds brand recognition and professionalism.</p>
-                </div>
-
-                <h4>Brand Guidelines Prompt</h4>
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>Help me create visual brand guidelines for my real estate business:
-
-Business Name: [Your Name/Team Name]
-Market: [Your City/Region]
-Specialization: [Your niche]
-Target Audience: [Your ideal clients]
-
-I want my brand to feel: [Professional/Approachable/Luxury/Modern/etc]
-
-Suggest:
-1. Primary and secondary colors (with hex codes)
-2. Font pairings (for headings and body text)
-3. Visual style (photography style, graphics approach)
-4. Logo ideas
-5. Social media template concepts
-
-Make recommendations that will stand out in my market while remaining professional.</pre>
+                <div class="notes-section">
+                    <h4>NOTES: Video content strategy</h4>
+                    <textarea class="notes-field" data-key="video-strategy" placeholder="Write your notes here..."></textarea>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Automation Section -->
-        <section id="automation" class="section">
-            <div class="section-header">Part 4: Workflow Automation</div>
+        <!-- PART 5: WORKFLOW AUTOMATION -->
+        <div class="section">
+            <div class="section-header">PART 5: WORKFLOW AUTOMATION</div>
             <div class="section-content">
-                <h3>Automate to Dominate</h3>
+                <h3>Daily Outreach Strategy</h3>
 
-                <p>The real power of AI comes when you combine it with automation tools. By connecting your AI tools to your existing systems, you can save hours every day on repetitive tasks.</p>
+                <p><strong>The System That Changes Everything</strong></p>
 
-                <div class="callout callout-orange">
-                    <strong>⏱️ Time Savings</strong>
-                    <p>Top-producing agents using automation report saving 10-15 hours per week on administrative tasks, allowing them to focus on high-value activities like client relationships and negotiations.</p>
-                </div>
+                <h4>Morning Routine (30 minutes)</h4>
 
-                <h3>Essential Automation Tools</h3>
-
-                <h4>1. Zapier (zapier.com)</h4>
-                <p><strong>What it does:</strong> Connects your apps and automates workflows without coding.</p>
-                <p><strong>Cost:</strong> Free tier available; paid plans from $19.99/month</p>
-
-                <h4>2. Make (make.com) - formerly Integromat</h4>
-                <p><strong>What it does:</strong> Visual automation builder with more complex capabilities.</p>
-                <p><strong>Cost:</strong> Free tier with 1,000 operations/month</p>
-
-                <h3>Real Estate Automation Workflows</h3>
-
-                <h4>Automation 1: Lead Response System</h4>
-                <p><strong>Goal:</strong> Instantly respond to new leads with personalized information.</p>
-
-                <div class="callout callout-cyan">
-                    <strong>Workflow Steps:</strong>
-                    <ol>
-                        <li>New lead fills out form on your website</li>
-                        <li>Zapier captures the lead information</li>
-                        <li>ChatGPT API generates personalized response email</li>
-                        <li>Email is automatically sent</li>
-                        <li>Lead is added to your CRM</li>
-                        <li>Task is created for follow-up call</li>
-                    </ol>
-                </div>
-
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>ZAPIER SETUP: Lead Response Automation
-
-Trigger: New form submission (from your website)
-Action 1: ChatGPT - Create personalized email
-
-ChatGPT Prompt:
-"Write a friendly, professional email response to a new lead:
-
-Lead Name: {{Name}}
-Interest: {{Property Type}}
-Budget: {{Budget}}
-Timeline: {{Timeline}}
-Message: {{Their Message}}
-
-The email should:
-1. Thank them for reaching out
-2. Acknowledge their specific interests
-3. Mention 1-2 relevant listings I have
-4. Explain my process
-5. Suggest a specific time for a call
-6. Be warm but professional
-
-Sign it: [Your Name], [Your Title], [Your Brokerage]"
-
-Action 2: Send email via Gmail
-Action 3: Add to CRM (your system)
-Action 4: Send yourself a Slack/text notification
-Action 5: Create Google Calendar reminder for follow-up</pre>
-                </div>
-
-                <h4>Automation 2: Social Media Scheduler</h4>
-                <p><strong>Goal:</strong> Create and schedule a week of social content in 30 minutes.</p>
-
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>WORKFLOW: Weekly Social Media Content
-
-Step 1: In ChatGPT
-"Create 7 Instagram posts for this week:
-
-Monday: Market tip about [Your area]
-Tuesday: New listing at [Address]
-Wednesday: Home maintenance tip for [Season]
-Thursday: Client success story (placeholder text)
-Friday: Weekend open house promotion
-Saturday: Behind-the-scenes post
-Sunday: Motivational/inspirational post
-
-For each post include:
-- Caption (with line breaks for readability)
-- 5-10 relevant hashtags
-- Call-to-action
-- Best posting time
-- Image suggestion
-
-Make them engaging and authentic to [Your market]."
-
-Step 2: Copy outputs to scheduling tool
-- Later.com
-- Buffer
-- Hootsuite
-- Meta Business Suite
-
-Step 3: Create or source images
-- Canva templates
-- Property photos
-- Personal photos
-- Stock images (Unsplash, Pexels)
-
-Step 4: Schedule all posts at recommended times</pre>
-                </div>
-
-                <h4>Automation 3: Transaction Checklist Manager</h4>
-                <p><strong>Goal:</strong> Never miss a deadline or task in a transaction.</p>
-
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>AUTOMATION: Transaction Management
-
-Trigger: New property goes under contract
-
-Automated Actions:
-1. Create transaction folder in Google Drive
-2. Generate checklist in your project management tool
-3. Set up calendar reminders for key dates:
-   - Inspection deadline
-   - Appraisal deadline
-   - Financing deadline
-   - Title review deadline
-   - Final walkthrough
-   - Closing date
-4. Send welcome email to client with timeline
-5. Notify team members
-6. Create weekly check-in reminders
-
-Tools needed:
-- Google Drive (file storage)
-- Asana/Trello/Monday.com (task management)
-- Google Calendar (reminders)
-- Gmail (communications)
-- Zapier (connections)</pre>
-                </div>
-
-                <h4>Automation 4: Market Report Generator</h4>
-                <p><strong>Goal:</strong> Automatically create and send monthly market reports to your database.</p>
-
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>MONTHLY WORKFLOW: Market Report
-
-Schedule: 1st of every month
-
-Step 1: Gather data
-- Pull stats from your MLS
-- Note: Average price, DOM, inventory, closed sales
-
-Step 2: ChatGPT analysis
-"Analyze this real estate market data and create a newsletter:
-
-Market: [Your area]
-Month: [Month, Year]
-
-Data:
-- Homes Sold: [Number]
-- Average Sale Price: $[Amount] ([+/- X%] from last month)
-- Average Days on Market: [Number] ([+/- X] from last month)
-- Active Listings: [Number]
-- Months of Inventory: [Number]
-- Average List-to-Sale Ratio: [Percentage]
-
-Create a newsletter with:
-1. Catchy subject line
-2. Executive summary (2-3 sentences)
-3. What the numbers mean for buyers
-4. What the numbers mean for sellers
-5. Predictions for next month
-6. My recommendation/call-to-action
-
-Tone: Expert but accessible, informative but concise."
-
-Step 3: Design in Canva or email platform
-Step 4: Send via Mailchimp/Constant Contact/your email tool
-Step 5: Post summary on social media
-Step 6: Upload to your website blog</pre>
-                </div>
-
-                <h3>CRM Integration</h3>
-
-                <h4>Connecting AI to Your CRM</h4>
-                <p>Most modern real estate CRMs (Follow Up Boss, LionDesk, kvCORE, etc.) integrate with Zapier. This allows you to:</p>
-
+                <p><strong>7:00-7:10am: CMA Generation</strong></p>
                 <ul>
-                    <li>Auto-generate property recommendations based on client preferences</li>
-                    <li>Summarize client interactions for team members</li>
-                    <li>Create personalized email campaigns</li>
-                    <li>Score leads based on engagement</li>
+                    <li>Open Claude CMA Project</li>
+                    <li>Generate one CMA for farm area prospect</li>
+                    <li>Customize opening paragraph</li>
+                </ul>
+
+                <p><strong>7:10-7:15am: Email/Mail Preparation</strong></p>
+                <ul>
+                    <li>Add CMA to branded template</li>
+                    <li>Write personal note</li>
+                    <li>Schedule send or print for mail</li>
+                </ul>
+
+                <p><strong>7:15-7:25am: Social Media</strong></p>
+                <ul>
+                    <li>Post one piece of content from Content Factory</li>
+                    <li>Engage with 10 comments/posts</li>
+                    <li>Share story or reel</li>
+                </ul>
+
+                <p><strong>7:25-7:30am: Follow-Up</strong></p>
+                <ul>
+                    <li>Review yesterday's outreach</li>
+                    <li>Schedule follow-up calls</li>
+                    <li>Update CRM</li>
+                </ul>
+
+                <hr>
+
+                <h4>Weekly Routine (2 hours)</h4>
+
+                <p><strong>Monday: Content Creation</strong></p>
+                <ul>
+                    <li>Record 10-minute market update</li>
+                    <li>Upload to Otter.ai → Claude</li>
+                    <li>Generate week's content</li>
+                </ul>
+
+                <p><strong>Tuesday: Content Scheduling</strong></p>
+                <ul>
+                    <li>Schedule social posts for week</li>
+                    <li>Prepare email newsletter</li>
+                    <li>Update blog</li>
+                </ul>
+
+                <p><strong>Wednesday: CMA Planning</strong></p>
+                <ul>
+                    <li>Identify week's CMA targets (7)</li>
+                    <li>Gather property data</li>
+                    <li>Prepare delivery method</li>
+                </ul>
+
+                <p><strong>Thursday: Engagement</strong></p>
+                <ul>
+                    <li>Respond to all inquiries</li>
+                    <li>Comment on sphere posts</li>
+                    <li>Reconnect with past clients</li>
+                </ul>
+
+                <p><strong>Friday: Review & Plan</strong></p>
+                <ul>
+                    <li>Track week's metrics</li>
+                    <li>Plan next week</li>
+                    <li>Adjust strategy</li>
+                </ul>
+
+                <hr>
+
+                <h3>ROI TRACKING WORKSHEET</h3>
+
+                <h4>Weekly Time Investment:</h4>
+                <ul>
+                    <li>Daily AI routine: 30 min × 5 = 2.5 hours</li>
+                    <li>Weekly content creation: 2 hours</li>
+                    <li><strong>TOTAL: 4.5 hours/week</strong></li>
+                </ul>
+
+                <h4>Time SAVED (vs. manual):</h4>
+                <ul>
+                    <li>Content creation: 10 hours → 2 hours = <strong>8 hours saved</strong></li>
+                    <li>CMA generation: 5 × 45 min → 10 min = <strong>3.5 hours saved</strong></li>
+                    <li>Research: 2 hours → 20 min = <strong>1.5 hours saved</strong></li>
+                    <li><strong>TOTAL SAVED: 13 hours/week</strong></li>
                 </ul>
 
                 <div class="callout callout-lime">
-                    <strong>🔗 Integration Tip</strong>
-                    <p>Start with one simple automation and perfect it before building complex workflows. Most agents benefit most from automating lead response first.</p>
+                    <strong>Net Gain: 8.5 hours/week for revenue activities</strong>
+                    <p>At $150/hour = <strong>$1,275/week = $5,100/month potential</strong></p>
                 </div>
 
-                <h3>Email Automation with AI</h3>
-
-                <h4>Nurture Campaign Template</h4>
-                <div class="prompt-box">
-                    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
-                    <pre>Create a 6-email nurture campaign for [Buyer/Seller] leads:
-
-Audience: [Description of your typical lead]
-Goal: [Schedule consultation/Get listing appointment]
-Timeline: Over 2 weeks
-
-For each email, provide:
-- Subject line (with A/B test variant)
-- Email body (3-5 short paragraphs)
-- Call-to-action
-- Optimal sending day/time
-
-Email sequence should:
-1. Welcome and introduce yourself
-2. Provide valuable market information
-3. Share your unique approach/process
-4. Include social proof (testimonial framework)
-5. Address common concerns/objections
-6. Strong call-to-action for appointment
-
-Make them conversational, helpful, and build trust progressively.</pre>
+                <div class="notes-section">
+                    <h4>NOTES: My current time wasters that AI can solve</h4>
+                    <textarea class="notes-field" data-key="workflow-time-wasters" placeholder="Write your notes here..."></textarea>
                 </div>
-
-                <label class="notes-label">YOUR NOTES: Which automation will save you the most time?</label>
-                <textarea class="notes-area" placeholder="Prioritize your automation implementations..." data-storage-key="automation-notes"></textarea>
-
-                <h3>Building Your AI Tech Stack</h3>
-
-                <div class="grid-2">
-                    <div class="card">
-                        <h4>Core Tools (Start Here)</h4>
-                        <ul>
-                            <li>ChatGPT Plus - $20/mo</li>
-                            <li>Claude Pro - $20/mo</li>
-                            <li>Canva Pro - $12.99/mo</li>
-                            <li>Zapier Starter - $19.99/mo</li>
-                        </ul>
-                        <p><strong>Total: ~$73/month</strong></p>
-                    </div>
-                    <div class="card">
-                        <h4>Advanced Tools (Add Later)</h4>
-                        <ul>
-                            <li>Virtual Staging AI - Per use</li>
-                            <li>Descript - $24/mo</li>
-                            <li>Later/Buffer - $25/mo</li>
-                            <li>Make.com - $9/mo</li>
-                        </ul>
-                        <p><strong>Additional: ~$58/month</strong></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Implementation Plan Section -->
-        <section id="implementation" class="section">
-            <div class="section-header">Part 5: Your 90-Day Implementation Plan</div>
-            <div class="section-content">
-                <h3>From Learning to Mastery</h3>
-
-                <p>The difference between taking this course and transforming your business is implementation. This 90-day plan breaks down everything you've learned into weekly action items.</p>
-
-                <div class="callout callout-orange">
-                    <strong>🎯 Your Mission</strong>
-                    <p>Follow this plan week by week. Don't skip ahead. Master each tool before moving to the next. By day 90, AI will be seamlessly integrated into your daily workflow.</p>
-                </div>
-
-                <h3>Month 1: Foundation & ChatGPT Mastery</h3>
-
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Week 1: Setup & First Wins</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Set up ChatGPT account (Plus recommended)</li>
-                            <li>Configure custom instructions</li>
-                            <li>Use ChatGPT for 3 property descriptions</li>
-                            <li>Generate 1 week of social media content</li>
-                            <li>Create 5 email response templates</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> You're using ChatGPT at least 3x per day</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4>Week 2: Content Creation System</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Build library of 10 best prompts for your business</li>
-                            <li>Create 1 month of social media content</li>
-                            <li>Write 3 blog posts with AI assistance</li>
-                            <li>Generate buyer/seller guides</li>
-                            <li>Create neighborhood description templates</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> You have content scheduled for 30 days</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4>Week 3: Client Communication</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Use AI for all client email responses this week</li>
-                            <li>Create personalized market reports for 5 clients</li>
-                            <li>Generate customized property recommendations</li>
-                            <li>Build FAQ document with AI</li>
-                            <li>Create scripts for common scenarios</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> 50% reduction in email response time</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4>Week 4: Refinement & Optimization</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Review what's working and what's not</li>
-                            <li>Refine your most-used prompts</li>
-                            <li>Organize your prompt library</li>
-                            <li>Train a team member on your system</li>
-                            <li>Set metrics for next month</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> ChatGPT is part of your daily routine</p>
-                    </div>
-                </div>
-
-                <label class="notes-label">MONTH 1 NOTES: What worked? What needs adjustment?</label>
-                <textarea class="notes-area" placeholder="Track your progress and challenges..." data-storage-key="month1-notes"></textarea>
-
-                <h3>Month 2: Claude Projects & Advanced Workflows</h3>
-
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Week 5: Claude Setup</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Set up Claude Pro account</li>
-                            <li>Create your first Claude Project (Client Manager)</li>
-                            <li>Add 5 current clients to the system</li>
-                            <li>Test document analysis features</li>
-                            <li>Compare Claude vs ChatGPT for different tasks</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> All active clients tracked in Claude</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4>Week 6: Project Expansion</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Create Market Intelligence Hub project</li>
-                            <li>Create Transaction Coordinator project</li>
-                            <li>Create Content Library project</li>
-                            <li>Migrate active transactions to Claude</li>
-                            <li>Build your local market knowledge base</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> 4 functioning Claude Projects</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4>Week 7: Visual Content</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Set up virtual staging account</li>
-                            <li>Virtually stage 1 listing</li>
-                            <li>Create social media graphics with AI</li>
-                            <li>Design 3 marketing templates in Canva</li>
-                            <li>Build brand guidelines</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> All listings have virtually staged photos</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4>Week 8: Integration & Analysis</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Review time savings from AI tools</li>
-                            <li>Calculate ROI on tool investments</li>
-                            <li>Identify biggest pain points still remaining</li>
-                            <li>Get feedback from clients on AI-enhanced service</li>
-                            <li>Plan automation priorities for Month 3</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> Documented 10+ hours saved per week</p>
-                    </div>
-                </div>
-
-                <label class="notes-label">MONTH 2 NOTES: How is AI changing your business?</label>
-                <textarea class="notes-area" placeholder="Reflect on transformation so far..." data-storage-key="month2-notes"></textarea>
-
-                <h3>Month 3: Automation & Scaling</h3>
-
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Week 9: Automation Setup</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Set up Zapier account</li>
-                            <li>Build lead response automation</li>
-                            <li>Connect CRM to AI tools</li>
-                            <li>Create social media scheduling workflow</li>
-                            <li>Test all automations thoroughly</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> 3 working automations</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4>Week 10: Advanced Automation</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Build transaction management automation</li>
-                            <li>Create market report automation</li>
-                            <li>Set up email nurture sequences</li>
-                            <li>Automate client check-ins</li>
-                            <li>Build referral request system</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> 5+ hours saved by automation</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4>Week 11: Team Training</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Document your complete AI system</li>
-                            <li>Train team members/assistants</li>
-                            <li>Create SOPs for AI tools</li>
-                            <li>Share prompts and templates</li>
-                            <li>Set up team collaboration in Claude Projects</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> Team using AI independently</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h4>Week 12: Optimization & Future</h4>
-                        <p><strong>Goals:</strong></p>
-                        <ul>
-                            <li>Complete 90-day review and analysis</li>
-                            <li>Calculate total time saved</li>
-                            <li>Measure business growth metrics</li>
-                            <li>Identify next-level opportunities</li>
-                            <li>Create your ongoing AI strategy</li>
-                        </ul>
-                        <p><strong>Success Metric:</strong> AI fully integrated into business</p>
-                    </div>
-                </div>
-
-                <label class="notes-label">MONTH 3 NOTES: What's your AI transformation story?</label>
-                <textarea class="notes-area" placeholder="Celebrate wins and plan next steps..." data-storage-key="month3-notes"></textarea>
-
-                <h3>Measuring Success</h3>
 
                 <div class="callout callout-cyan">
-                    <strong>📊 Key Metrics to Track</strong>
-                    <p>At the end of 90 days, measure:</p>
+                    <strong>Want a personalized workflow audit?</strong>
+                    <p>Bogen.AI offers office trainings where your entire team learns these systems together. Contact Edmund for group rates and custom implementation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 6: 90-DAY IMPLEMENTATION PLAN -->
+        <div class="section">
+            <div class="section-header">PART 6: 90-DAY IMPLEMENTATION PLAN</div>
+            <div class="section-content">
+                <h3>Your Week-by-Week Action Plan</h3>
+
+                <h4>PHASE 1: FOUNDATION (Weeks 1-4)</h4>
+
+                <div class="callout callout-orange">
+                    <strong>Week 1: Setup & First Win</strong>
+                    <p><strong>Goals:</strong></p>
                     <ul>
-                        <li><strong>Time Saved:</strong> Hours per week freed up by AI tools</li>
-                        <li><strong>Lead Response Time:</strong> Average time to respond to new leads</li>
-                        <li><strong>Content Output:</strong> Social posts, emails, marketing materials created</li>
-                        <li><strong>Client Satisfaction:</strong> Feedback on communication and service</li>
-                        <li><strong>Business Growth:</strong> New clients, transactions, revenue</li>
-                        <li><strong>ROI:</strong> Revenue increase vs. tool costs</li>
+                        <li>✅ Create ChatGPT account (Plus recommended)</li>
+                        <li>✅ Create Claude account (Pro recommended)</li>
+                        <li>✅ Complete first listing description with AI</li>
+                        <li>✅ Track time saved</li>
+                    </ul>
+                    <p><strong>Time Investment:</strong> 2-3 hours</p>
+                </div>
+
+                <div class="notes-section">
+                    <h4>Week 1 Notes:</h4>
+                    <textarea class="notes-field" data-key="implementation-week1" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <div class="callout callout-cyan">
+                    <strong>Week 2: CMA Factory Setup</strong>
+                    <p><strong>Goals:</strong></p>
+                    <ul>
+                        <li>✅ Create Claude CMA Project</li>
+                        <li>✅ Upload knowledge base documents</li>
+                        <li>✅ Generate first 3 CMAs</li>
+                        <li>✅ Send to prospects</li>
+                    </ul>
+                    <p><strong>Time Investment:</strong> 4-5 hours setup, then 10 min/CMA</p>
+                </div>
+
+                <div class="notes-section">
+                    <h4>Week 2 Notes:</h4>
+                    <textarea class="notes-field" data-key="implementation-week2" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <div class="callout callout-lime">
+                    <strong>Week 3: Content System Setup</strong>
+                    <p><strong>Goals:</strong></p>
+                    <ul>
+                        <li>✅ Set up Otter.ai</li>
+                        <li>✅ Create Content Factory Claude Project</li>
+                        <li>✅ Record first video</li>
+                        <li>✅ Generate week's content</li>
+                    </ul>
+                    <p><strong>Time Investment:</strong> 3 hours</p>
+                </div>
+
+                <div class="notes-section">
+                    <h4>Week 3 Notes:</h4>
+                    <textarea class="notes-field" data-key="implementation-week3" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <div class="callout callout-orange">
+                    <strong>Week 4: Virtual Staging Mastery</strong>
+                    <p><strong>Goals:</strong></p>
+                    <ul>
+                        <li>✅ Stage first listing virtually</li>
+                        <li>✅ Create before/after comparisons</li>
+                        <li>✅ Implement in marketing</li>
+                    </ul>
+                    <p><strong>Time Investment:</strong> 2 hours</p>
+                </div>
+
+                <div class="notes-section">
+                    <h4>Week 4 Notes:</h4>
+                    <textarea class="notes-field" data-key="implementation-week4" placeholder="Write your notes here..."></textarea>
+                </div>
+
+                <hr>
+
+                <h4>PHASE 2: CONSISTENCY (Weeks 5-8)</h4>
+
+                <div class="callout callout-cyan">
+                    <strong>Weeks 5-6: Daily CMA Rhythm</strong>
+                    <p><strong>Goals:</strong></p>
+                    <ul>
+                        <li>✅ Send CMA every day (14 total)</li>
+                        <li>✅ Track open/response rates</li>
+                        <li>✅ Book consultation from AI outreach</li>
                     </ul>
                 </div>
 
-                <h3>Your Weekly Routine (Post-Implementation)</h3>
-
-                <h4>Daily Tasks</h4>
-                <ul>
-                    <li>Check Claude Projects for client updates</li>
-                    <li>Respond to leads using AI-assisted templates</li>
-                    <li>Generate 1-2 pieces of social content</li>
-                    <li>Update transaction checklists</li>
-                </ul>
-
-                <h4>Weekly Tasks</h4>
-                <ul>
-                    <li>Review and schedule week's social media content</li>
-                    <li>Update market intelligence hub with new data</li>
-                    <li>Send personalized check-ins to active clients</li>
-                    <li>Generate property recommendations for buyers</li>
-                    <li>Create 1 piece of long-form content (blog/video)</li>
-                </ul>
-
-                <h4>Monthly Tasks</h4>
-                <ul>
-                    <li>Create and send market report to database</li>
-                    <li>Review automation performance</li>
-                    <li>Update prompt library with new discoveries</li>
-                    <li>Train team on new AI features</li>
-                    <li>Measure ROI and metrics</li>
-                </ul>
-
-                <h3>Continuing Education</h3>
+                <div class="notes-section">
+                    <h4>Weeks 5-6 Notes:</h4>
+                    <textarea class="notes-field" data-key="implementation-weeks5-6" placeholder="Write your notes here..."></textarea>
+                </div>
 
                 <div class="callout callout-lime">
-                    <strong>🚀 Stay Current</strong>
-                    <p>AI tools evolve rapidly. Dedicate 1 hour per week to:</p>
+                    <strong>Weeks 7-8: Content Consistency</strong>
+                    <p><strong>Goals:</strong></p>
                     <ul>
-                        <li>Exploring new features in ChatGPT and Claude</li>
-                        <li>Testing new AI tools for real estate</li>
-                        <li>Reading AI news and updates</li>
-                        <li>Connecting with other AI-savvy agents</li>
-                        <li>Refining and optimizing your workflows</li>
+                        <li>✅ Post daily using AI content</li>
+                        <li>✅ Engage consistently</li>
+                        <li>✅ Measure reach/engagement growth</li>
                     </ul>
                 </div>
 
-                <label class="notes-label">YOUR 90-DAY COMMITMENT: What specific outcomes do you commit to achieving?</label>
-                <textarea class="notes-area" placeholder="Write your commitment and specific goals..." data-storage-key="commitment-notes"></textarea>
-            </div>
-        </section>
-
-        <!-- Bonus Resources Section -->
-        <section id="resources" class="section">
-            <div class="section-header">Bonus Resources & Quick Reference</div>
-            <div class="section-content">
-                <h3>Prompt Library Quick Reference</h3>
-
-                <div class="grid-2">
-                    <div class="card">
-                        <h4>Content Creation</h4>
-                        <ul>
-                            <li>Property descriptions</li>
-                            <li>Social media posts</li>
-                            <li>Blog articles</li>
-                            <li>Email newsletters</li>
-                            <li>Video scripts</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4>Client Communication</h4>
-                        <ul>
-                            <li>Lead responses</li>
-                            <li>Follow-up emails</li>
-                            <li>Market reports</li>
-                            <li>Buyer/seller guides</li>
-                            <li>Thank you notes</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4>Analysis & Research</h4>
-                        <ul>
-                            <li>Market analysis</li>
-                            <li>Neighborhood reports</li>
-                            <li>Investment analysis</li>
-                            <li>Competitive research</li>
-                            <li>Document summaries</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4>Business Development</h4>
-                        <ul>
-                            <li>Listing presentations</li>
-                            <li>Marketing plans</li>
-                            <li>Referral requests</li>
-                            <li>Networking messages</li>
-                            <li>Partnership pitches</li>
-                        </ul>
-                    </div>
+                <div class="notes-section">
+                    <h4>Weeks 7-8 Notes:</h4>
+                    <textarea class="notes-field" data-key="implementation-weeks7-8" placeholder="Write your notes here..."></textarea>
                 </div>
 
-                <h3>Recommended Tools Summary</h3>
+                <hr>
 
-                <h4>AI Assistants</h4>
-                <ul>
-                    <li><strong>ChatGPT Plus:</strong> chat.openai.com - $20/mo</li>
-                    <li><strong>Claude Pro:</strong> claude.ai - $20/mo</li>
-                </ul>
-
-                <h4>Visual Content</h4>
-                <ul>
-                    <li><strong>Canva Pro:</strong> canva.com - $12.99/mo</li>
-                    <li><strong>Virtual Staging AI:</strong> virtualstagingai.app - Per use</li>
-                    <li><strong>Styldod:</strong> styldod.com - Per image</li>
-                    <li><strong>Remove.bg:</strong> remove.bg - Free/Pro</li>
-                </ul>
-
-                <h4>Automation</h4>
-                <ul>
-                    <li><strong>Zapier:</strong> zapier.com - Free tier available</li>
-                    <li><strong>Make:</strong> make.com - Free tier available</li>
-                </ul>
-
-                <h4>Social Media Management</h4>
-                <ul>
-                    <li><strong>Later:</strong> later.com</li>
-                    <li><strong>Buffer:</strong> buffer.com</li>
-                    <li><strong>Meta Business Suite:</strong> Free for Facebook/Instagram</li>
-                </ul>
-
-                <h3>Troubleshooting Common Issues</h3>
+                <h4>PHASE 3: OPTIMIZATION (Weeks 9-12)</h4>
 
                 <div class="callout callout-orange">
-                    <strong>❓ Problem: AI responses are too generic</strong>
-                    <p><strong>Solution:</strong> Add more context and specific details to your prompts. Include your market, client type, and desired tone.</p>
+                    <strong>Weeks 9-10: Refine & Scale</strong>
+                    <p><strong>Goals:</strong></p>
+                    <ul>
+                        <li>✅ Analyze what's working</li>
+                        <li>✅ Double down on wins</li>
+                        <li>✅ Eliminate what's not working</li>
+                    </ul>
+                </div>
+
+                <div class="notes-section">
+                    <h4>Weeks 9-10 Notes:</h4>
+                    <textarea class="notes-field" data-key="implementation-weeks9-10" placeholder="Write your notes here..."></textarea>
                 </div>
 
                 <div class="callout callout-cyan">
-                    <strong>❓ Problem: Running out of ChatGPT messages</strong>
-                    <p><strong>Solution:</strong> Use ChatGPT for creative tasks and Claude for long-term projects. Consider when you really need GPT-4 vs GPT-3.5.</p>
+                    <strong>Weeks 11-12: Advanced Strategies</strong>
+                    <p><strong>Goals:</strong></p>
+                    <ul>
+                        <li>✅ Implement advanced prompts</li>
+                        <li>✅ Automate more workflows</li>
+                        <li>✅ Train team (if applicable)</li>
+                    </ul>
                 </div>
 
-                <div class="callout callout-lime">
-                    <strong>❓ Problem: Automation not working reliably</strong>
-                    <p><strong>Solution:</strong> Start simple. Test each step individually. Check data formats match between apps. Monitor for errors daily at first.</p>
+                <div class="notes-section">
+                    <h4>Weeks 11-12 Notes:</h4>
+                    <textarea class="notes-field" data-key="implementation-weeks11-12" placeholder="Write your notes here..."></textarea>
                 </div>
 
-                <h3>Getting Help</h3>
+                <hr>
 
-                <p>As you implement these systems, you'll have questions. Here are resources:</p>
+                <h3>90-Day Success Metrics</h3>
 
+                <p><strong>Track These Numbers:</strong></p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Before AI</th>
+                            <th>After 90 Days</th>
+                            <th>Improvement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hours/week on admin</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                        </tr>
+                        <tr>
+                            <td>Content posts/week</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                        </tr>
+                        <tr>
+                            <td>CMAs sent/month</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                        </tr>
+                        <tr>
+                            <td>Prospect touches/month</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                        </tr>
+                        <tr>
+                            <td>Consultations booked</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                        </tr>
+                        <tr>
+                            <td>Deals closed</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                            <td>_____</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="notes-section">
+                    <h4>Financial ROI Calculation:</h4>
+                    <textarea class="notes-field" data-key="implementation-roi" placeholder="Money saved on services: $__________
+Time value saved: $__________
+Additional revenue attributed to AI: $__________
+TOTAL ROI: $__________"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 7: TROUBLESHOOTING & FAQ -->
+        <div class="section">
+            <div class="section-header">PART 7: TROUBLESHOOTING & FAQ</div>
+            <div class="section-content">
+                <h3>Common Issues & Solutions</h3>
+
+                <h4>"The AI output is too generic"</h4>
+                <p><strong>Solution:</strong> Improve your prompts</p>
                 <ul>
-                    <li><strong>ChatGPT Help:</strong> help.openai.com</li>
-                    <li><strong>Claude Help:</strong> support.anthropic.com</li>
-                    <li><strong>Zapier Community:</strong> community.zapier.com</li>
-                    <li><strong>Real Estate AI Groups:</strong> Search Facebook for AI-focused agent communities</li>
+                    <li>Add more specific details</li>
+                    <li>Include your brand voice examples</li>
+                    <li>Use custom instructions</li>
+                    <li>Iterate: "Make this more [specific quality]"</li>
                 </ul>
 
-                <label class="notes-label">YOUR RESOURCE NOTES: Bookmark important links and add your own discoveries</label>
-                <textarea class="notes-area" placeholder="Keep track of helpful resources..." data-storage-key="resources-notes"></textarea>
-            </div>
-        </section>
+                <h4>"CMAs don't match my market exactly"</h4>
+                <p><strong>Solution:</strong> Update your MLS data regularly</p>
+                <ul>
+                    <li>Refresh data monthly</li>
+                    <li>Add more comps (50+ properties)</li>
+                    <li>Include neighborhood notes</li>
+                    <li>Manual verification always required</li>
+                </ul>
 
-        <!-- Final Section -->
-        <section id="conclusion" class="section">
-            <div class="section-header">Your AI Journey Starts Now</div>
-            <div class="section-content">
-                <h3>The Competitive Advantage</h3>
+                <h4>"I don't have time to learn this"</h4>
+                <p><strong>Solution:</strong> Start smaller</p>
+                <ul>
+                    <li>Choose ONE tool</li>
+                    <li>Use 15 min/day for 7 days</li>
+                    <li>Master before adding more</li>
+                    <li>Time invested pays back immediately</li>
+                </ul>
 
-                <p>You now have access to the same AI tools that top producers use to dominate their markets. The difference between you and them isn't access—it's implementation.</p>
+                <h4>"What if AI makes a mistake?"</h4>
+                <p><strong>Solution:</strong> AI + Human review ALWAYS</p>
+                <ul>
+                    <li>Never send AI content without review</li>
+                    <li>Fact-check all data</li>
+                    <li>Add personal touches</li>
+                    <li>You're the expert, AI is the assistant</li>
+                </ul>
+
+                <h4>"My clients will know it's AI"</h4>
+                <p><strong>Solution:</strong> Transparency + customization</p>
+                <ul>
+                    <li>Customize every output</li>
+                    <li>Add personal insights</li>
+                    <li>Be transparent when appropriate</li>
+                    <li>Focus on VALUE delivered, not method</li>
+                </ul>
+
+                <hr>
+
+                <h3>When You Need More Help</h3>
+
+                <h4>Bogen.AI Services</h4>
+
+                <p><strong>Private Coaching:</strong></p>
+                <ul>
+                    <li>One-on-one AI integration strategy</li>
+                    <li>Custom prompt development</li>
+                    <li>Workflow optimization</li>
+                    <li>Ongoing support</li>
+                </ul>
+
+                <p><strong>Office Trainings:</strong></p>
+                <ul>
+                    <li>Team-wide implementation</li>
+                    <li>Customized to your market</li>
+                    <li>Hands-on setup sessions</li>
+                    <li>Post-training support</li>
+                </ul>
+
+                <p><strong>Done-for-You Setup:</strong></p>
+                <ul>
+                    <li>Claude Projects built for you</li>
+                    <li>Custom prompt libraries</li>
+                    <li>Workflow documentation</li>
+                    <li>Team training included</li>
+                </ul>
 
                 <div class="callout callout-orange">
-                    <strong>⚡ The Reality</strong>
-                    <p>Most agents who take courses like this never implement what they learn. They get overwhelmed, distracted, or simply don't commit. Don't be most agents.</p>
+                    <strong>Contact Edmund Bogen:</strong>
+                    <p>Website: Bogen.AI<br>
+                    Email: [Your email]<br>
+                    Phone: [Your phone]</p>
                 </div>
+            </div>
+        </div>
 
-                <h3>Your Action Plan</h3>
+        <!-- CONGRATULATIONS -->
+        <div class="section">
+            <div class="section-header">CONGRATULATIONS!</div>
+            <div class="section-content">
+                <h3>You've Completed The AI Domination Playbook</h3>
+
+                <p><strong>Your Next Steps:</strong></p>
 
                 <ol>
-                    <li><strong>Start Today:</strong> Don't wait until Monday or next month. Open ChatGPT right now and try one prompt.</li>
-                    <li><strong>Follow the 90-Day Plan:</strong> Week by week, tool by tool. Don't skip steps.</li>
-                    <li><strong>Track Your Progress:</strong> Use the notes sections in this playbook. Document wins and challenges.</li>
-                    <li><strong>Share Your Success:</strong> When AI helps you win a listing or close a deal, share it. Become known as the tech-savvy agent in your market.</li>
-                    <li><strong>Stay Curious:</strong> AI is evolving rapidly. What's cutting-edge today will be standard tomorrow. Stay ahead.</li>
+                    <li><strong>Implement Week 1</strong> - Don't wait, start today</li>
+                    <li><strong>Join the Community</strong> - Connect with other AI-powered agents</li>
+                    <li><strong>Track Your Results</strong> - Document your wins</li>
+                    <li><strong>Share Your Success</strong> - Help others see what's possible</li>
                 </ol>
 
-                <h3>The Future is Already Here</h3>
-
-                <p>AI isn't replacing real estate agents. But agents who use AI are replacing agents who don't.</p>
-
-                <p>You have everything you need:</p>
+                <p><strong>Remember:</strong></p>
                 <ul>
-                    <li>✅ The tools</li>
-                    <li>✅ The prompts</li>
-                    <li>✅ The implementation plan</li>
-                    <li>✅ The support resources</li>
+                    <li>AI is a tool, YOU are the expert</li>
+                    <li>Start small, build momentum</li>
+                    <li>Consistency beats perfection</li>
+                    <li>The future belongs to early adopters</li>
                 </ul>
 
-                <p><strong>What happens next is up to you.</strong></p>
-
-                <div class="callout callout-cyan">
-                    <strong>💡 Remember</strong>
-                    <p>The goal isn't to use AI for everything. The goal is to use AI strategically to free up your time for what truly matters: building relationships, serving clients, and growing your business.</p>
-                </div>
+                <hr>
 
                 <h3>Stay Connected</h3>
 
-                <p>This isn't the end—it's the beginning. As you implement these strategies, you'll discover new applications, face new challenges, and achieve new wins.</p>
+                <p><strong>Edmund Bogen</strong><br>
+                Luxury Real Estate | AI Integration Specialist</p>
 
-                <p>Thank you for trusting me with your AI education. I can't wait to see what you build.</p>
+                <p><strong>Services:</strong></p>
+                <ul>
+                    <li>Private AI Coaching</li>
+                    <li>Office Trainings</li>
+                    <li>Done-for-You Setup</li>
+                    <li>Ongoing Support</li>
+                </ul>
 
-                <p style="text-align: center; font-size: 24px; margin-top: 40px;"><strong>Now go dominate. 🚀</strong></p>
+                <div class="callout callout-cyan">
+                    <strong>Contact:</strong>
+                    <p>Bogen.AI<br>
+                    [Your contact information]</p>
+                </div>
 
-                <label class="notes-label">FINAL REFLECTION: What's your biggest takeaway? What will you do first?</label>
-                <textarea class="notes-area" placeholder="Capture your thoughts and first action step..." data-storage-key="final-notes"></textarea>
+                <hr>
+
+                <h3>Special Offer for Coursebook Readers</h3>
+
+                <p><strong>Ready to implement faster with expert guidance?</strong></p>
+
+                <p>The <strong>AI-Powered Real Estate Mastermind</strong> includes:</p>
+                <ul>
+                    <li>Live monthly coaching calls</li>
+                    <li>Private community access</li>
+                    <li>Updated prompts and tools</li>
+                    <li>Direct support from Edmund</li>
+                    <li>90-day implementation roadmap</li>
+                </ul>
+
+                <p><strong>Founding member rates available now.</strong></p>
+
+                <p>Visit [Signup URL] or contact Edmund directly to learn more.</p>
+
+                <hr>
+
+                <p style="text-align: center; margin-top: 40px;">
+                    <strong>Version 1.0 | October 2025</strong><br>
+                    <strong>© 2025 Edmund Bogen / Bogen.AI | All Rights Reserved</strong>
+                </p>
+
+                <p style="text-align: center; font-style: italic; color: #666;">
+                    This coursebook is provided for educational purposes. AI outputs require human verification and should never replace professional judgment in real estate transactions.
+                </p>
             </div>
-        </section>
+        </div>
+
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div>
-            <h3 style="color: white; margin-bottom: 20px;">Thank You to Our Sponsors</h3>
-            <p style="margin-bottom: 20px;">This course is made possible by our generous sponsors</p>
-            <a href="sponsors.html" style="display: inline-block; padding: 15px 30px; background: #0047AB; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">View Sponsors</a>
-        </div>
-        <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #333;">
             <p>&copy; 2025 Edmund Bogen - AI Domination Playbook</p>
-            <p style="margin-top: 10px; font-size: 14px; color: #888;">All rights reserved</p>
+            <p style="margin-top: 20px;"><a href="sponsors.html">View Our Sponsors</a></p>
         </div>
     </footer>
 
@@ -2005,7 +1998,13 @@ Make them conversational, helpful, and build trust progressively.</pre>
             window.location.href = 'login.html';
         }
 
-        // Mobile menu toggle
+        // Logout function
+        function logout() {
+            sessionStorage.removeItem('aiPlaybookAuth');
+            window.location.href = 'login.html';
+        }
+
+        // Toggle mobile menu
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
@@ -2013,66 +2012,40 @@ Make them conversational, helpful, and build trust progressively.</pre>
 
         // Copy prompt function
         function copyPrompt(button) {
-            const promptBox = button.parentElement;
-            const text = promptBox.querySelector('pre').textContent;
+            const promptBox = button.closest('.prompt-box');
+            const preElement = promptBox.querySelector('pre');
+            const textToCopy = preElement.textContent;
 
-            navigator.clipboard.writeText(text).then(() => {
-                const originalText = button.textContent;
+            navigator.clipboard.writeText(textToCopy).then(() => {
                 button.textContent = 'Copied!';
                 button.classList.add('copied');
 
                 setTimeout(() => {
-                    button.textContent = originalText;
+                    button.textContent = 'Copy';
                     button.classList.remove('copied');
                 }, 2000);
             }).catch(err => {
                 console.error('Failed to copy:', err);
-                button.textContent = 'Error!';
-                setTimeout(() => {
-                    button.textContent = 'Copy';
-                }, 2000);
+                button.textContent = 'Error';
             });
         }
 
-        // Local storage for notes
+        // Save notes to localStorage
         document.addEventListener('DOMContentLoaded', function() {
-            const textareas = document.querySelectorAll('.notes-area');
+            const notesFields = document.querySelectorAll('.notes-field');
 
             // Load saved notes
-            textareas.forEach(textarea => {
-                const key = textarea.getAttribute('data-storage-key');
-                if (key) {
-                    const saved = localStorage.getItem(key);
-                    if (saved) {
-                        textarea.value = saved;
-                    }
+            notesFields.forEach(field => {
+                const key = field.getAttribute('data-key');
+                const savedNote = localStorage.getItem(key);
+                if (savedNote) {
+                    field.value = savedNote;
                 }
-            });
 
-            // Save notes on change
-            textareas.forEach(textarea => {
-                textarea.addEventListener('input', function() {
-                    const key = this.getAttribute('data-storage-key');
-                    if (key) {
-                        localStorage.setItem(key, this.value);
-                    }
+                // Save on change
+                field.addEventListener('input', function() {
+                    localStorage.setItem(key, field.value);
                 });
-            });
-        });
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    document.getElementById('navMenu').classList.remove('active');
-                }
             });
         });
     </script>
