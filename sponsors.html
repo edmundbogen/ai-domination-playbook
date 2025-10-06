@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsors - AI Domination Playbook</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: #0047AB;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #00D9FF;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0047AB 0%, #003380 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: #0047AB;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Featured Sponsor */
+        .featured-sponsor {
+            background: linear-gradient(135deg, #0047AB 0%, #003380 100%);
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            margin-bottom: 80px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 71, 171, 0.3);
+        }
+
+        .featured-sponsor h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #FF6B35;
+        }
+
+        .sponsor-logo-featured {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 400px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .sponsor-logo-featured h2 {
+            color: #0047AB;
+            font-size: 42px;
+            margin: 0;
+        }
+
+        .featured-sponsor p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .sponsor-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #FF6B35;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .sponsor-btn:hover {
+            background: #e85d2d;
+        }
+
+        /* Sponsor Grid */
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .sponsor-card {
+            background: white;
+            border: 3px solid #0047AB;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .sponsor-logo {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .sponsor-logo h3 {
+            color: #0047AB;
+            font-size: 32px;
+        }
+
+        .sponsor-card h4 {
+            color: #000000;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .sponsor-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .sponsor-contact {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .sponsor-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #0047AB;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .sponsor-link:hover {
+            background: #003380;
+        }
+
+        /* Coming Soon */
+        .coming-soon {
+            background: #f8f9fa;
+            border: 3px dashed #0047AB;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .coming-soon h4 {
+            color: #0047AB;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .coming-soon p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Thank You Section */
+        .thank-you {
+            background: #f8f9fa;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .thank-you h3 {
+            color: #0047AB;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .thank-you p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: #00D9FF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #39FF14;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .featured-sponsor {
+                padding: 30px 20px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .sponsors-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sponsor-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">AI DOMINATION PLAYBOOK</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Back to Course</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Our Sponsors</h1>
+        <p>This course is made possible by the generous support of our sponsors who are committed to excellence in real estate and education.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Featured Sponsor -->
+        <div class="featured-sponsor">
+            <h3>Presenting Sponsor</h3>
+            <div class="sponsor-logo-featured">
+                <h2>SKLAR FURNISHINGS</h2>
+            </div>
+            <p><strong>Sklar Furnishings</strong> has been a trusted name in quality furniture and home furnishings for decades. As a family-owned business, they understand the importance of making a house feel like a home.</p>
+            <p>Their commitment to excellence, customer service, and quality craftsmanship aligns perfectly with the values we teach in this AI training program.</p>
+            <p>Whether you're staging a luxury listing or furnishing your own home, Sklar Furnishings offers an extensive selection of furniture, decor, and design services to meet every need and style.</p>
+            <a href="https://sklarfurnishings.com/" target="_blank" class="sponsor-btn">Visit Sklar Furnishings</a>
+        </div>
+
+        <!-- Co-Sponsors Section -->
+        <div class="section-header">
+            <h2>Co-Sponsors</h2>
+            <p>Thank you to our co-sponsors for supporting real estate education</p>
+        </div>
+
+        <div class="sponsors-grid">
+            <!-- Mark Wahl - Home Inspector -->
+            <div class="sponsor-card">
+                <div class="sponsor-logo">
+                    <h3>🏠 4WPI</h3>
+                </div>
+                <h4>Mark Wahl</h4>
+                <p><strong>Certified Home Inspector</strong></p>
+                <p>Mark Wahl provides thorough, professional home inspection services that give buyers confidence and sellers peace of mind. With years of experience and cutting-edge inspection technology, Mark delivers comprehensive reports that help make informed real estate decisions.</p>
+                <div class="sponsor-contact">
+                    <p>Serving the local real estate community with integrity and expertise</p>
+                </div>
+                <a href="https://4wpi.com/" target="_blank" class="sponsor-link">Learn More</a>
+            </div>
+
+            <!-- Cliff Bernstein - Mortgage Broker -->
+            <div class="sponsor-card">
+                <div class="sponsor-logo">
+                    <h3>🏦 Fairway</h3>
+                </div>
+                <h4>Cliff Bernstein</h4>
+                <p><strong>Independent Mortgage Broker</strong></p>
+                <p>Cliff Bernstein brings decades of mortgage expertise to help buyers secure the best financing for their dream homes. As an independent broker with Fairway Independent Mortgage Corporation, Cliff has access to a wide range of loan products and lenders to find the perfect fit for each client.</p>
+                <div class="sponsor-contact">
+                    <p>Making homeownership possible through expert guidance</p>
+                </div>
+                <a href="https://www.fairway.com/lo/cliff-bernstein-7853" target="_blank" class="sponsor-link">Connect with Cliff</a>
+            </div>
+
+            <!-- Seth Leader - Coming Soon -->
+            <div class="sponsor-card coming-soon">
+                <div class="sponsor-logo">
+                    <h3>✨</h3>
+                </div>
+                <h4>Seth Leader</h4>
+                <p><strong>Sponsorship Details Coming Soon</strong></p>
+                <p>We're excited to announce Seth Leader as a co-sponsor of the AI Domination Playbook. More information about Seth's services and expertise will be available soon.</p>
+                <div class="sponsor-contact">
+                    <p>Stay tuned for updates</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thank You Section -->
+        <div class="thank-you">
+            <h3>Thank You to Our Sponsors</h3>
+            <p>Without the generous support of Sklar Furnishings, Mark Wahl, Cliff Bernstein, and Seth Leader, this comprehensive AI training program wouldn't be possible. Their commitment to excellence in their respective fields mirrors the quality education we strive to provide.</p>
+            <p>If you're a real estate professional looking for trusted partners in home staging, inspection, or financing, we highly recommend connecting with our sponsors.</p>
+        </div>
+
+        <!-- Become a Sponsor Section -->
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: #f8f9fa; border-radius: 15px;">
+            <h3 style="color: #0047AB; font-size: 28px; margin-bottom: 20px;">Interested in Sponsoring?</h3>
+            <p style="font-size: 18px; color: #666; margin-bottom: 30px;">If you're interested in supporting real estate education and reaching agents committed to excellence, we'd love to hear from you.</p>
+            <p style="font-size: 16px; color: #888;">Contact: <strong>Edmund Bogen</strong></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <p>&copy; 2025 Edmund Bogen - AI Domination Playbook</p>
+            <p style="margin-top: 20px;"><a href="index.html">Return to Course</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Check authentication
+        if (sessionStorage.getItem('aiPlaybookAuth') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
