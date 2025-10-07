@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Tools - AI Domination Playbook</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: #0047AB;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #00D9FF;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0047AB 0%, #003380 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: #0047AB;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Tool Categories */
+        .tool-category {
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            font-size: 32px;
+            color: #0047AB;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #FF6B35;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .tool-card {
+            background: white;
+            border: 3px solid #0047AB;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .tool-card h3 {
+            color: #0047AB;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .tool-card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .tool-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #0047AB;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+            word-break: break-all;
+        }
+
+        .tool-link:hover {
+            background: #003380;
+        }
+
+        /* Footer */
+        .footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: #00D9FF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #39FF14;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .category-title {
+                font-size: 24px;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tool-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">AI DOMINATION PLAYBOOK</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Back to Course</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Today's AI Tools</h1>
+        <p>Your complete resource guide for AI assistants, creative tools, and automation platforms</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- AI Assistants & LLMs -->
+        <div class="tool-category">
+            <h2 class="category-title">🧠 AI Assistants & Large Language Models</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>ChatGPT</h3>
+                    <p>OpenAI's conversational AI - best for general content, quick tasks, and image analysis</p>
+                    <a href="https://chat.openai.com" target="_blank" class="tool-link">Visit ChatGPT</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Claude</h3>
+                    <p>Anthropic's AI assistant - superior for long-form content, analysis, and document review</p>
+                    <a href="https://www.anthropic.com/claude" target="_blank" class="tool-link">Visit Claude</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Perplexity</h3>
+                    <p>AI-powered search engine with real-time web access and source citations</p>
+                    <a href="https://www.perplexity.ai" target="_blank" class="tool-link">Visit Perplexity</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>DeepSeek</h3>
+                    <p>Advanced AI model focused on reasoning and complex problem-solving</p>
+                    <a href="https://www.deepseek.com" target="_blank" class="tool-link">Visit DeepSeek</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Grok</h3>
+                    <p>xAI's conversational AI with real-time information and unique personality</p>
+                    <a href="https://x.ai/grok" target="_blank" class="tool-link">Visit Grok</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Gemini</h3>
+                    <p>Google's multimodal AI - integrated across Google's ecosystem</p>
+                    <a href="https://ai.google/" target="_blank" class="tool-link">Visit Gemini</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Meta AI</h3>
+                    <p>Meta's AI assistant integrated with Facebook, Instagram, and WhatsApp</p>
+                    <a href="https://www.meta.ai" target="_blank" class="tool-link">Visit Meta AI</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Genspark</h3>
+                    <p>AI-powered search reinvented - intelligent research and discovery</p>
+                    <a href="https://www.genspark.ai" target="_blank" class="tool-link">Visit Genspark</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Le Chat</h3>
+                    <p>Mistral AI's conversational assistant - European AI excellence</p>
+                    <a href="https://chat.mistral.ai" target="_blank" class="tool-link">Visit Le Chat</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Developer & Research Tools -->
+        <div class="tool-category">
+            <h2 class="category-title">🧰 Developer & Research Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Google AI Studio</h3>
+                    <p>Google's AI development platform - build and test AI applications</p>
+                    <a href="https://ai.google.dev/aistudio" target="_blank" class="tool-link">Visit AI Studio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Creative & Design Tools -->
+        <div class="tool-category">
+            <h2 class="category-title">🎨 Creative & Design Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Midjourney</h3>
+                    <p>Leading AI image generation - create stunning visuals from text descriptions</p>
+                    <a href="https://www.midjourney.com" target="_blank" class="tool-link">Visit Midjourney</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Runway</h3>
+                    <p>AI-powered video editing and creation - professional tools made accessible</p>
+                    <a href="https://runwayml.com" target="_blank" class="tool-link">Visit Runway</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Captions</h3>
+                    <p>AI video editor with automatic captions, effects, and editing tools</p>
+                    <a href="https://www.captions.ai" target="_blank" class="tool-link">Visit Captions</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Suno AI</h3>
+                    <p>Generate original music and songs from text prompts</p>
+                    <a href="https://www.suno.ai" target="_blank" class="tool-link">Visit Suno AI</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Sora</h3>
+                    <p>OpenAI's video generation model - create videos from text</p>
+                    <a href="https://openai.com/sora/" target="_blank" class="tool-link">Visit Sora</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio / Voice / Transcription -->
+        <div class="tool-category">
+            <h2 class="category-title">🎙️ Audio / Voice / Transcription</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Otter.ai</h3>
+                    <p>Real-time transcription and meeting notes - essential for content creation</p>
+                    <a href="https://otter.ai" target="_blank" class="tool-link">Visit Otter.ai</a>
+                </div>
+
+                <div class="tool-card">
+                    <h3>ElevenLabs</h3>
+                    <p>Realistic AI voice generation and cloning - create professional voiceovers</p>
+                    <a href="https://elevenlabs.io" target="_blank" class="tool-link">Visit ElevenLabs</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <p>&copy; 2025 Edmund Bogen - AI Domination Playbook</p>
+            <p style="margin-top: 20px;"><a href="index.html">Return to Course</a> | <a href="sponsors.html">View Sponsors</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Check authentication
+        if (sessionStorage.getItem('aiPlaybookAuth') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
